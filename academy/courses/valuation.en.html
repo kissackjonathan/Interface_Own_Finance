@@ -1,0 +1,236 @@
+<h2 id="brief"><span class="part">Part 1 · In brief</span>Price is what you pay, value is what you get</h2>
+
+<p>Warren Buffett's famous line sums up this course. The <strong>price</strong> is a fact: it is on the screen. The <strong>value</strong> is an estimate: what the asset is really worth given the cash it will produce and the risks involved. Valuation is the craft of building that estimate in a disciplined, honest way — and of understanding why the market's price may be different.</p>
+
+<p>There are four big families of valuation methods:</p>
+<ul>
+<li><strong>Intrinsic valuation (DCF)</strong>: value = present value of future cash flows. The most fundamental approach.</li>
+<li><strong>Relative valuation (multiples)</strong>: value = what similar assets trade at (P/E, EV/EBITDA…). The most used in practice.</li>
+<li><strong>Transaction-based valuation</strong>: what buyers have paid for whole companies (precedent transactions) or could pay using debt (LBO analysis).</li>
+<li><strong>Contingent-claim valuation (options)</strong>: some assets behave like options — a patent, an undeveloped oil field, the equity of a company close to bankruptcy.</li>
+</ul>
+
+<div class="box key"><span class="bt">The one idea to remember</span>
+<p>Every valuation is a <strong>story turned into numbers</strong>. A DCF is not more "true" than a multiple — it simply makes your assumptions explicit. The best valuation is not the most precise one; it is the one whose assumptions are realistic, consistent with each other, and clearly linked to how the business actually works.</p></div>
+
+<p>The <em>Stock Analysis</em> course introduced the DCF, WACC and multiples. This course goes further: how to choose every input, how to handle difficult cases (banks, start-ups, cyclicals, emerging markets, private companies), how private equity values a company with an LBO, how option theory helps, and how professionals combine all methods into one conclusion.</p>
+
+<h2 id="history"><span class="part">Part 2 · History</span>How valuation became a science</h2>
+<ol class="timeline">
+<li><span class="d">1930</span><b>Irving Fisher</b>, <em>The Theory of Interest</em>: the value of any capital asset is the present value of its future income.</li>
+<li><span class="d">1938</span><b>John Burr Williams</b> applies it to stocks: value = present value of future dividends.</li>
+<li><span class="d">1956</span><b>Gordon and Shapiro</b>: the constant-growth formula \(P = D_1/(r-g)\).</li>
+<li><span class="d">1958–61</span><b>Modigliani and Miller</b>: without taxes and frictions, value depends on cash flows, not on financing or dividend policy. With taxes, debt creates a tax shield — the basis of WACC and APV.</li>
+<li><span class="d">1964</span><b>CAPM</b> (Sharpe and others) gives a way to estimate the discount rate.</li>
+<li><span class="d">1973</span><b>Black, Scholes and Merton</b> price options. In <b>1977</b> <b>Stewart Myers</b> coins the term "real options" for investment opportunities inside companies.</li>
+<li><span class="d">1974</span><b>Stewart Myers</b> introduces <b>Adjusted Present Value (APV)</b>: value the business as if unlevered, then add the value of the tax shield.</li>
+<li><span class="d">1976</span><b>KKR</b> is founded. The 1980s leveraged buyout boom culminates in the <b>RJR Nabisco</b> deal (1988–89, about 25 billion dollars) — made famous by the book <em>Barbarians at the Gate</em>.</li>
+<li><span class="d">1990</span>McKinsey consultants Copeland, Koller and Murrin publish <em>Valuation</em>, which becomes the standard corporate finance reference. Stern Stewart promotes <b>EVA</b>.</li>
+<li><span class="d">1995</span><b>James Ohlson</b> formalises the <b>residual income model</b>, linking value directly to accounting numbers.</li>
+<li><span class="d">1999–2000</span>The <b>dot-com bubble</b>: companies with no profits are valued on "eyeballs" and "clicks". When it bursts, the Nasdaq loses about 78% from peak to trough — a lesson in narratives disconnected from cash flows.</li>
+<li><span class="d">2000s</span><b>Aswath Damodaran</b> (NYU) publishes free data on equity risk premiums, betas and multiples for every industry and country; his implied ERP becomes a market standard.</li>
+<li><span class="d">2006–13</span><b>Fair value accounting</b> standards (US FAS 157, then IFRS 13) define a hierarchy of valuation inputs: Level 1 (quoted prices), Level 2 (observable inputs), Level 3 (models). Valuation enters the balance sheet.</li>
+<li><span class="d">2010s–20s</span>Low rates push valuations of long-duration growth assets very high; the 2022 rate shock brings them down sharply. Private markets and venture capital grow enormously, raising new valuation questions.</li>
+</ol>
+
+<div class="people">
+<div class="person"><b>Irving Fisher</b><span class="y">1867–1947</span><p>Present value as the foundation of all valuation.</p></div>
+<div class="person"><b>Franco Modigliani & Merton Miller</b><span class="y">1918–2003 · 1923–2000</span><p>Capital structure and dividend irrelevance; tax shields. Nobel prizes 1985 and 1990.</p></div>
+<div class="person"><b>Stewart Myers</b><span class="y">b. 1940</span><p>APV and real options.</p></div>
+<div class="person"><b>Tim Koller</b><span class="y">—</span><p>McKinsey partner, lead author of <em>Valuation</em>; the value-driver formula.</p></div>
+<div class="person"><b>Aswath Damodaran</b><span class="y">b. 1957</span><p>"Dean of valuation". Narrative and numbers; free data for the world.</p></div>
+<div class="person"><b>Henry Kravis & George Roberts</b><span class="y">b. 1944 · b. 1943</span><p>Co-founders of KKR; built the LBO model of private equity.</p></div>
+</div>
+
+<h2 id="core"><span class="part">Part 3 · The core</span>The full machinery of valuation</h2>
+
+<h3 id="process">3.1 The valuation process</h3>
+<ol>
+<li><strong>Define the question</strong>: value for whom and for what? A minority stake in a listed company (market value), a controlling stake (control value), a liquidation, a tax or legal case. The "standard of value" changes the answer.</li>
+<li><strong>Understand the business and write the story</strong>: market size, growth, competitive position, margins at maturity, reinvestment needs, risks. Damodaran's test: the story must be <em>possible</em>, <em>plausible</em> and <em>probable</em>.</li>
+<li><strong>Translate the story into numbers</strong>: revenue growth, target margin, sales-to-capital ratio (reinvestment), risk (discount rate), probability of failure.</li>
+<li><strong>Value with several methods</strong> (DCF, multiples, transactions, LBO where relevant).</li>
+<li><strong>Check consistency and sensitivity</strong>; compare with the market price; explain the gap.</li>
+<li><strong>Conclude with a range</strong> and the key drivers that would change it.</li>
+</ol>
+
+<h3 id="rates">3.2 The discount rate in depth</h3>
+
+<h4>Risk-free rate: match the currency</h4>
+<p>The risk-free rate must be in the <strong>same currency as the cash flows</strong> and roughly match their duration. A DCF in CHF uses the Swiss Confederation bond yield (very low); a DCF in USD uses US Treasuries. Mixing a CHF risk-free rate with USD cash flows (or with USD inflation in the growth rate) is a classic error. Rule: <strong>inflation in the cash flows must equal inflation in the discount rate</strong>.</p>
+
+<h4>Equity risk premium (ERP): historical vs implied</h4>
+<ul>
+<li><strong>Historical ERP</strong>: average past excess return of stocks over bonds (about 4–6% depending on country and period). Very noisy and backward-looking.</li>
+<li><strong>Implied ERP</strong> (Damodaran): take today's index level and expected cash returns to shareholders (dividends + buybacks) growing at expected rates, then solve for the discount rate that makes their present value equal the index. ERP = that rate − risk-free rate. It is forward-looking and changes every day with the market.</li>
+</ul>
+\[ \text{Index level} = \sum_{t=1}^{5}\frac{CF_t}{(1+r)^t} + \frac{CF_5\,(1+g)}{(r-g)(1+r)^5} \quad\Rightarrow\quad \text{ERP}_{\text{implied}} = r - r_f \]
+
+<h4>Country risk premium</h4>
+<p>Companies operating in riskier countries deserve a higher discount rate. A common method:</p>
+\[ \text{CRP} = \text{Sovereign default spread} \times \frac{\sigma_{\text{equity market}}}{\sigma_{\text{government bond}}} \]
+<p>Example: a country's dollar bonds trade 2% above US Treasuries; its equity market is 1.5 times as volatile as its bonds → CRP ≈ 3%. Apply it according to where the company <em>operates</em> (revenues), not where it is listed.</p>
+
+<h4>Beta: bottom-up is better</h4>
+<p>A single company's regression beta has a large standard error. Better: take the average <strong>unlevered</strong> beta of many comparable firms, then relever with the target company's own debt-to-equity ratio:</p>
+\[ \beta_U = \frac{\beta_L}{1 + (1-t)\,D/E} \qquad\qquad \beta_L = \beta_U\left[1 + (1-t)\,\frac{D}{E}\right] \]
+
+<h4>Cost of debt</h4>
+<p>Use the yield on the company's long-term bonds, or a <strong>synthetic rating</strong>: estimate the rating from the interest coverage ratio (EBIT / interest), then add the typical spread for that rating to the risk-free rate. After-tax cost of debt = \(r_D(1-t)\). Leases are debt.</p>
+
+<h4>Weights</h4>
+<p>Use <strong>market values</strong> (or target capital structure), not book values. A company with a book equity of 10 and a market cap of 200 is mostly financed by equity, whatever its balance sheet says.</p>
+
+<div class="box warn"><span class="bt">Size premium and "fudge factors"</span>
+<p>Many practitioners add a "size premium" or a "company-specific premium" of several percent to the cost of equity of small firms. Be careful: the evidence for a size premium has weakened a lot since the 1980s, and arbitrary premiums often hide uncertainty that should be in the cash flows (scenarios, probability of failure) instead.</p></div>
+
+<h3 id="cashflows">3.3 Cash flows in depth</h3>
+<ul>
+<li><strong>Start from revenue, not profit</strong>: revenue growth × target operating margin → EBIT → NOPAT. The margin path towards maturity is often the most important assumption.</li>
+<li><strong>Reinvestment through the sales-to-capital ratio</strong>: \(\text{Reinvestment}_t = \Delta\text{Revenue}_t / (\text{Sales/Capital})\). It forces growth to be paid for and keeps ROIC realistic.</li>
+<li><strong>Maintenance vs growth capex</strong>: a mature firm still needs capex roughly equal to depreciation (more with inflation).</li>
+<li><strong>Normalise</strong>: remove one-offs, use mid-cycle margins for cyclicals.</li>
+<li><strong>Stock-based compensation</strong> is a real expense: keep it in costs (do not add it back), or you will overvalue companies that pay employees in shares.</li>
+<li><strong>R&amp;D</strong> is an investment: Damodaran capitalises it (adds the research asset to invested capital and amortises it), which raises both earnings and invested capital and gives a truer ROIC for tech and pharma.</li>
+<li><strong>Mid-year convention</strong>: cash flows arrive during the year, not at its end; discount at \(t - 0.5\). This adds roughly half a year of WACC to the value.</li>
+</ul>
+
+<h3 id="terminal">3.4 Terminal value: where most of the value lives</h3>
+<p>Three ways, which should be consistent:</p>
+<div class="box formula"><span class="bt">Formulas · Terminal value</span>
+\[ TV_N = \frac{\text{FCFF}_{N+1}}{\text{WACC} - g} \qquad TV_N = \frac{\text{NOPAT}_{N+1}\,(1 - g/\text{RONIC})}{\text{WACC} - g} \qquad TV_N = \text{EBITDA}_N \times \text{Exit multiple} \]
+<p>The second (value-driver) version is the most honest: it forces reinvestment to match growth. Typical assumptions for a mature company: \(g\) ≤ long-term risk-free rate (or nominal GDP growth), RONIC close to WACC for average firms (competition erodes excess returns) or somewhat above for firms with lasting moats.</p></div>
+<ul>
+<li>If the terminal value is 75–85% of the total, that is normal for a growing company — but it means your <em>long-term</em> assumptions dominate.</li>
+<li>Check the <strong>implied exit multiple</strong> of your Gordon terminal value and the <strong>implied growth</strong> of your exit multiple. If a 2% growth rate implies an exit EV/EBITDA of 25×, something is inconsistent.</li>
+</ul>
+
+<h3 id="bridge">3.5 From enterprise value to value per share</h3>
+<table>
+<thead><tr><th>Step</th><th>Comment</th></tr></thead>
+<tbody>
+<tr><td>Enterprise value (DCF of FCFF)</td><td>Value of operations</td></tr>
+<tr><td>+ Cash and non-operating assets</td><td>Excess cash, financial investments, stakes in associates (at market value)</td></tr>
+<tr><td>− Debt (at market value)</td><td>Bonds, loans</td></tr>
+<tr><td>− Lease liabilities</td><td>If leases were treated as debt in FCFF</td></tr>
+<tr><td>− Unfunded pension liabilities (after tax)</td><td>A debt to former employees</td></tr>
+<tr><td>− Minority interests (at market value)</td><td>Parts of subsidiaries owned by others</td></tr>
+<tr><td>− Value of employee options and convertibles</td><td>Claims on equity</td></tr>
+<tr class="tot"><td>= Equity value ÷ shares</td><td>Value per share</td></tr>
+</tbody></table>
+<div class="box formula"><span class="bt">Formula · Treasury stock method (diluted shares)</span>
+\[ N_{\text{diluted}} = N_{\text{basic}} + N_{\text{options}} \times \left(1 - \frac{K}{P}\right) \quad \text{for in-the-money options} \]
+<p>Assumes the company uses the exercise proceeds to buy back shares. Example: 100 million shares, 10 million options with strike 30, share price 50 → 100 + 10 × (1 − 30/50) = <strong>104 million</strong> diluted shares. (A more exact method values the options with an option model and subtracts their value from equity.)</p></div>
+
+<h3 id="multiples">3.6 Relative valuation done properly</h3>
+<ol>
+<li><strong>Choose true comparables</strong>: similar growth, risk, margins and reinvestment needs — not just "same industry".</li>
+<li><strong>Use consistent definitions</strong>: same period (next 12 months), same accounting adjustments, EV with EV-based measures.</li>
+<li><strong>Look at the distribution</strong>: use the median, or the harmonic mean for ratios like P/E (it reduces the effect of very high multiples).</li>
+<li><strong>Control for fundamentals</strong>: a simple regression across peers — e.g. EV/EBITDA against expected growth and ROIC — tells you what multiple a company "deserves" given its fundamentals.</li>
+<li><strong>Explain the gap</strong>: is the company cheaper because it is worse, or because the market is wrong?</li>
+</ol>
+<p><strong>Trading comparables</strong> use market prices of listed peers (minority stakes). <strong>Precedent transactions</strong> use prices paid in acquisitions; they include a <strong>control premium</strong> (often 20–40% above the pre-announcement price) because the buyer gains control and expects synergies.</p>
+
+<h3 id="sotp">3.7 Sum of the parts and holding discounts</h3>
+<p>For conglomerates and holding companies, value each division separately (with its own multiple or DCF), add them, subtract net debt and central costs (capitalised). The market often prices conglomerates <strong>below</strong> their sum of the parts — a <strong>conglomerate or holding discount</strong> of 10–30% — because of complexity, capital misallocation, taxes on a break-up and lack of control. Activists often target such discounts and push for spin-offs.</p>
+
+<h3 id="special">3.8 Difficult cases</h3>
+<table>
+<thead><tr><th>Case</th><th>Problem</th><th>How professionals handle it</th></tr></thead>
+<tbody>
+<tr><td><strong>Banks</strong></td><td>Debt is raw material, not financing; FCF is hard to define</td><td>Value equity directly: dividend discount or excess return model. Key relation: \(P/\text{TBV} = (\text{ROTE} - g)/(r_E - g)\).</td></tr>
+<tr><td><strong>Insurers</strong></td><td>Long-term liabilities, investment income</td><td>Embedded value (life), P/B vs ROE, combined ratio (non-life).</td></tr>
+<tr><td><strong>Real estate</strong></td><td>Value is in the assets</td><td>Net asset value (NAV) from property valuations; cap rates; FFO multiples.</td></tr>
+<tr><td><strong>Young / loss-making firms</strong></td><td>No profits, huge uncertainty</td><td>Revenue-driven DCF with a target margin at maturity, high reinvestment, and an explicit <strong>probability of failure</strong>; scenarios.</td></tr>
+<tr><td><strong>Cyclical and commodity firms</strong></td><td>Profits swing with the cycle</td><td>Normalised (mid-cycle) earnings and margins; value at long-term commodity prices.</td></tr>
+<tr><td><strong>Distressed firms</strong></td><td>Going-concern DCF ignores bankruptcy</td><td>Value = P(survive) × going-concern value + P(fail) × liquidation value; or treat equity as an option.</td></tr>
+<tr><td><strong>Private companies</strong></td><td>No market price, no liquidity</td><td>Same methods, plus an <strong>illiquidity discount</strong> (often 20–30%) for minority stakes; total beta if the owner is not diversified.</td></tr>
+<tr><td><strong>Start-ups (venture capital)</strong></td><td>Only a future exit</td><td><strong>VC method</strong>: post-money value = expected exit value / (1 + target return)ⁿ.</td></tr>
+</tbody></table>
+<div class="box example"><span class="bt">Example: the VC method</span>
+<p>A start-up could be worth CHF 500 million at exit in 5 years. The VC fund targets a 50% annual return (to compensate for the many failures). Post-money value today = 500 / 1.5⁵ ≈ <strong>CHF 66 million</strong>. If the fund invests CHF 10 million, it asks for about 10/66 ≈ 15% of the company.</p></div>
+
+<h3 id="lbo">3.9 LBO analysis: how private equity values a company</h3>
+<p>In a <strong>leveraged buyout</strong>, a private equity fund buys a company using a lot of debt, uses the company's cash flows to repay that debt, improves the business, and sells after 3–7 years. The LBO model answers: <em>what is the maximum price we can pay and still reach our target return (often 20%+ IRR)?</em> It gives a "floor" valuation for any company that could be bought by a financial buyer.</p>
+
+<div class="box example"><span class="bt">Example: a simple LBO</span>
+<p><strong>Entry</strong>: EBITDA 100, purchase at 10× → EV 1,000, financed with 600 of debt (6× EBITDA, 6% interest) and 400 of equity.<br>
+<strong>Operations</strong>: EBITDA grows 5% per year; 50% of EBITDA becomes cash before interest; after-tax interest is paid and all remaining cash repays debt.</p>
+<table>
+<thead><tr><th>Year</th><th class="r">EBITDA</th><th class="r">Cash to repay debt</th><th class="r">Debt at year end</th></tr></thead>
+<tbody>
+<tr><td>0</td><td class="r">100.0</td><td class="r">—</td><td class="r">600.0</td></tr>
+<tr><td>1</td><td class="r">105.0</td><td class="r">23.7</td><td class="r">576.3</td></tr>
+<tr><td>2</td><td class="r">110.3</td><td class="r">27.5</td><td class="r">548.8</td></tr>
+<tr><td>3</td><td class="r">115.8</td><td class="r">31.5</td><td class="r">517.3</td></tr>
+<tr><td>4</td><td class="r">121.6</td><td class="r">35.9</td><td class="r">481.4</td></tr>
+<tr><td>5</td><td class="r">127.6</td><td class="r">40.7</td><td class="r">440.6</td></tr>
+</tbody></table>
+<p><strong>Exit</strong> after 5 years at the same 10× multiple: EV = 1,276; equity = 1,276 − 441 = <strong>836</strong>.<br>
+<strong>MOIC</strong> (multiple of invested capital) = 836 / 400 = <strong>2.1×</strong>; <strong>IRR</strong> = 2.09^(1/5) − 1 ≈ <strong>15.9%</strong>.</p>
+<p><strong>Value creation bridge</strong>: EBITDA growth (+27.6 × 10 = +276) + debt repayment (+159) + multiple change (0) = +436 of equity value. If the fund could also exit at 11×, equity would be about 963 → IRR ≈ 19%. This is why PE funds love buying cheap and selling higher ("multiple arbitrage") — and why higher interest rates (more costly debt, lower exit multiples) hurt them.</p></div>
+
+<div class="box formula"><span class="bt">Formulas · IRR and MOIC</span>
+\[ \text{MOIC} = \frac{\text{Equity at exit} + \text{dividends received}}{\text{Equity invested}} \qquad \text{IRR}: \; \sum_t \frac{CF_t}{(1+\text{IRR})^t} = 0 \;\Rightarrow\; \text{IRR} = \text{MOIC}^{1/n} - 1 \text{ (single in/out)} \]</div>
+
+<h3 id="options">3.10 Real options and option-based valuation</h3>
+<p>Some value comes from <strong>flexibility</strong>: the right, but not the obligation, to do something later. A DCF based on one expected scenario misses it.</p>
+<ul>
+<li><strong>Option to expand</strong>: a first factory that opens the door to a big market.</li>
+<li><strong>Option to delay</strong>: an undeveloped oil field or a patent — you invest only if prices or demand become attractive.</li>
+<li><strong>Option to abandon</strong>: selling or closing a project if it fails limits losses.</li>
+</ul>
+<div class="box formula"><span class="bt">Formula · Black-Scholes (call option)</span>
+\[ C = S\,N(d_1) - K e^{-rT} N(d_2), \qquad d_1 = \frac{\ln(S/K) + (r + \sigma^2/2)\,T}{\sigma\sqrt{T}}, \qquad d_2 = d_1 - \sigma\sqrt{T} \]
+<p>For a real option: \(S\) = present value of the project's cash flows, \(K\) = investment cost, \(T\) = time you can wait (e.g. patent life), \(\sigma\) = volatility of project value, \(r\) = risk-free rate, \(N(\cdot)\) = normal cumulative distribution.</p></div>
+<div class="box example"><span class="bt">Example: a patent</span>
+<p>A drug patent gives 5 years to launch a product. Present value of the product's cash flows today: 100; launch cost: 120; volatility 40%; risk-free 3%. A static NPV says 100 − 120 = <strong>−20</strong>: worthless. But the right to wait and launch only if things go well is worth \(d_1 = 0.411\), \(d_2 = -0.483\), \(N(d_1) = 0.659\), \(N(d_2) = 0.314\) → \(C = 100 \times 0.659 - 120\,e^{-0.15} \times 0.314 \approx\) <strong>33.5</strong>. Flexibility turns a "bad" project into a valuable asset.</p></div>
+<p><strong>Equity as an option</strong>: for a very indebted company, equity is a call option on the firm's assets with a strike equal to the face value of debt (Merton). Even if assets are worth less than the debt today, equity still has value because of the chance that assets recover — which is why shares of near-bankrupt companies rarely trade at zero.</p>
+
+<h3 id="triangulate">3.11 Triangulation and the "football field"</h3>
+<p>Professionals present the result as a chart of value ranges for each method — the <strong>football field</strong>: 52-week trading range, analyst targets, trading comparables, precedent transactions, DCF (with sensitivity), LBO. The final conclusion is a range where the most reliable methods overlap, with a clear explanation of which method is weighted most and why.</p>
+
+<div class="box warn"><span class="bt">The most common valuation mistakes</span>
+<ul>
+<li>Growth without reinvestment (or ROIC rising to unrealistic levels in the forecast).</li>
+<li>Inconsistent inflation or currency between cash flows and discount rate.</li>
+<li>Terminal growth above the risk-free rate or nominal GDP growth.</li>
+<li>Adding back stock-based compensation; ignoring dilution, leases or pensions.</li>
+<li>Double-counting risk (higher discount rate <em>and</em> pessimistic cash flows for the same risk).</li>
+<li>Bias: starting from the answer the client or your thesis wants, then adjusting inputs. Fix: decide assumptions before seeing the result; have someone challenge them.</li>
+<li>False precision: valuing to the cent something whose uncertainty is ±30%.</li>
+</ul></div>
+
+<h2 id="check"><span class="part">Part 4 · Check yourself</span>Questions to test your understanding</h2>
+<details class="q"><summary>1. You value a Swiss company with cash flows in CHF but use a 4% US Treasury yield as the risk-free rate. What is wrong?</summary><p>Currency mismatch. CHF cash flows embed Swiss inflation, which is much lower; the discount rate must use a CHF risk-free rate. Otherwise the company is undervalued.</p></details>
+<details class="q"><summary>2. A company has 50 million shares and 5 million options with strike 40; the share trades at 80. Diluted shares with the treasury stock method?</summary><p>50 + 5 × (1 − 40/80) = <strong>52.5 million</strong>.</p></details>
+<details class="q"><summary>3. Why do precedent transactions usually give higher values than trading comparables?</summary><p>They include a control premium for gaining control and expected synergies.</p></details>
+<details class="q"><summary>4. In an LBO, name the three sources of equity value creation.</summary><p>Operating improvement (EBITDA growth), debt paydown (deleveraging), and multiple expansion at exit.</p></details>
+<details class="q"><summary>5. An undeveloped oil field has a negative static NPV. Why can it still be worth a lot?</summary><p>It is an option to develop later: if oil prices rise, the field becomes profitable; if not, you do not invest. High volatility and long time to expiry increase the option value.</p></details>
+<details class="q"><summary>6. A VC expects a CHF 300 million exit in 4 years and targets 40% per year. Post-money value today?</summary><p>300 / 1.4⁴ ≈ <strong>CHF 78 million</strong>.</p></details>
+<details class="q"><summary>7. How should you value a bank, and why not with EV/EBITDA?</summary><p>For banks, debt and deposits are operating raw material, so "enterprise value" and EBITDA are meaningless. Value equity directly with dividends or excess returns (ROE vs cost of equity), and use P/TBV vs ROTE.</p></details>
+
+<h2 id="glossary"><span class="part">Part 5 · Glossary</span>Key terms</h2>
+<dl class="gloss">
+<dt>APV</dt><dd>Adjusted present value: unlevered value + value of tax shields − costs of distress.</dd>
+<dt>Control premium</dt><dd>Extra price paid to gain control of a company.</dd>
+<dt>Country risk premium</dt><dd>Extra return for operating in a riskier country.</dd>
+<dt>Football field</dt><dd>Chart comparing value ranges from different methods.</dd>
+<dt>Holding discount</dt><dd>Gap between a group's market value and the sum of its parts.</dd>
+<dt>Illiquidity discount</dt><dd>Value reduction for assets that cannot be sold easily.</dd>
+<dt>Implied ERP</dt><dd>Equity risk premium implied by current market prices.</dd>
+<dt>IRR</dt><dd>Internal rate of return: discount rate making NPV zero.</dd>
+<dt>LBO</dt><dd>Leveraged buyout: acquisition financed mostly with debt.</dd>
+<dt>MOIC</dt><dd>Multiple on invested capital.</dd>
+<dt>Precedent transactions</dt><dd>Valuation from prices paid in past acquisitions.</dd>
+<dt>Real option</dt><dd>Flexibility in a real investment (expand, delay, abandon).</dd>
+<dt>Sales-to-capital</dt><dd>Revenue generated per unit of capital invested; drives reinvestment.</dd>
+<dt>Sum of the parts</dt><dd>Valuing each division separately and adding them.</dd>
+<dt>Synthetic rating</dt><dd>Credit rating estimated from interest coverage.</dd>
+<dt>Treasury stock method</dt><dd>Way to count dilution from in-the-money options.</dd>
+<dt>VC method</dt><dd>Start-up valuation from exit value and target return.</dd>
+</dl>
+
+<div class="box key"><span class="bt">To go further</span>
+<p>Koller, Goedhart &amp; Wessels, <em>Valuation</em> (McKinsey) · Damodaran, <em>Investment Valuation</em>, <em>The Dark Side of Valuation</em> and <em>Narrative and Numbers</em> · Rosenbaum &amp; Pearl, <em>Investment Banking: Valuation, LBOs and M&amp;A</em> · Damodaran's website (data on ERP, betas and multiples, updated every January).</p></div>

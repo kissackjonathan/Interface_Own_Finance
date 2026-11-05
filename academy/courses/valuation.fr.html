@@ -1,0 +1,236 @@
+<h2 id="brief"><span class="part">Partie 1 · En bref</span>Le prix, c'est ce que tu paies ; la valeur, c'est ce que tu obtiens</h2>
+
+<p>La célèbre phrase de Warren Buffett résume ce cours. Le <strong>prix</strong> est un fait : il est à l'écran. La <strong>valeur</strong> est une estimation : ce que vaut vraiment l'actif compte tenu du cash qu'il produira et des risques encourus. La valorisation est l'art de construire cette estimation de façon disciplinée et honnête — et de comprendre pourquoi le prix du marché peut être différent.</p>
+
+<p>Il existe quatre grandes familles de méthodes :</p>
+<ul>
+<li><strong>Valorisation intrinsèque (DCF)</strong> : valeur = valeur actuelle des flux de trésorerie futurs. L'approche la plus fondamentale.</li>
+<li><strong>Valorisation relative (multiples)</strong> : valeur = prix auquel s'échangent des actifs similaires (P/E, EV/EBITDA…). La plus utilisée en pratique.</li>
+<li><strong>Valorisation par les transactions</strong> : ce que des acheteurs ont payé pour des entreprises entières (transactions comparables) ou pourraient payer avec de la dette (analyse LBO).</li>
+<li><strong>Valorisation optionnelle</strong> : certains actifs se comportent comme des options — un brevet, un gisement pétrolier non exploité, les actions d'une entreprise proche de la faillite.</li>
+</ul>
+
+<div class="box key"><span class="bt">L'idée à retenir</span>
+<p>Toute valorisation est une <strong>histoire traduite en chiffres</strong>. Un DCF n'est pas plus « vrai » qu'un multiple — il rend simplement tes hypothèses explicites. La meilleure valorisation n'est pas la plus précise ; c'est celle dont les hypothèses sont réalistes, cohérentes entre elles et clairement liées au fonctionnement réel de l'entreprise.</p></div>
+
+<p>Le cours <em>Analyser une action</em> a présenté le DCF, le WACC et les multiples. Ce cours va plus loin : comment choisir chaque paramètre, comment traiter les cas difficiles (banques, start-up, cycliques, marchés émergents, sociétés non cotées), comment le private equity valorise une entreprise avec un LBO, comment la théorie des options aide, et comment les professionnels combinent toutes les méthodes en une seule conclusion.</p>
+
+<h2 id="history"><span class="part">Partie 2 · Histoire</span>Comment la valorisation est devenue une science</h2>
+<ol class="timeline">
+<li><span class="d">1930</span><b>Irving Fisher</b>, <em>The Theory of Interest</em> : la valeur de tout actif est la valeur actuelle de ses revenus futurs.</li>
+<li><span class="d">1938</span><b>John Burr Williams</b> l'applique aux actions : valeur = valeur actuelle des dividendes futurs.</li>
+<li><span class="d">1956</span><b>Gordon et Shapiro</b> : la formule de croissance constante \(P = D_1/(r-g)\).</li>
+<li><span class="d">1958–61</span><b>Modigliani et Miller</b> : sans impôts ni frictions, la valeur dépend des flux, pas du financement ni des dividendes. Avec les impôts, la dette crée un avantage fiscal — la base du WACC et de l'APV.</li>
+<li><span class="d">1964</span>Le <b>CAPM</b> (Sharpe et d'autres) donne une façon d'estimer le taux d'actualisation.</li>
+<li><span class="d">1973</span><b>Black, Scholes et Merton</b> évaluent les options. En <b>1977</b>, <b>Stewart Myers</b> invente le terme « options réelles » pour les opportunités d'investissement des entreprises.</li>
+<li><span class="d">1974</span><b>Stewart Myers</b> introduit la <b>valeur actuelle ajustée (APV)</b> : valoriser l'entreprise comme si elle n'avait pas de dette, puis ajouter la valeur de l'avantage fiscal.</li>
+<li><span class="d">1976</span><b>KKR</b> est fondé. Le boom des LBO des années 1980 culmine avec le rachat de <b>RJR Nabisco</b> (1988–89, environ 25 milliards de dollars) — rendu célèbre par le livre <em>Barbarians at the Gate</em>.</li>
+<li><span class="d">1990</span>Les consultants de McKinsey Copeland, Koller et Murrin publient <em>Valuation</em>, qui devient la référence en finance d'entreprise. Stern Stewart promeut l'<b>EVA</b>.</li>
+<li><span class="d">1995</span><b>James Ohlson</b> formalise le <b>modèle du résultat résiduel</b>, qui relie directement la valeur aux chiffres comptables.</li>
+<li><span class="d">1999–2000</span>La <b>bulle internet</b> : des entreprises sans bénéfices sont valorisées sur les « visiteurs » et les « clics ». Quand elle éclate, le Nasdaq perd environ 78 % de son sommet à son creux — une leçon sur les récits déconnectés des flux de trésorerie.</li>
+<li><span class="d">2000s</span><b>Aswath Damodaran</b> (NYU) publie gratuitement des données sur les primes de risque, les bêtas et les multiples par secteur et par pays ; sa prime de risque implicite devient une référence de marché.</li>
+<li><span class="d">2006–13</span>Les normes de <b>juste valeur</b> (FAS 157 aux États-Unis, puis IFRS 13) définissent une hiérarchie des données : niveau 1 (prix cotés), niveau 2 (données observables), niveau 3 (modèles). La valorisation entre dans le bilan.</li>
+<li><span class="d">2010s–20s</span>Les taux bas font monter très haut la valorisation des actifs de croissance à longue duration ; le choc de taux de 2022 les fait fortement baisser. Les marchés privés et le capital-risque explosent, posant de nouvelles questions de valorisation.</li>
+</ol>
+
+<div class="people">
+<div class="person"><b>Irving Fisher</b><span class="y">1867–1947</span><p>La valeur actuelle comme fondement de toute valorisation.</p></div>
+<div class="person"><b>Franco Modigliani & Merton Miller</b><span class="y">1918–2003 · 1923–2000</span><p>Neutralité de la structure financière et des dividendes ; avantage fiscal de la dette. Prix Nobel 1985 et 1990.</p></div>
+<div class="person"><b>Stewart Myers</b><span class="y">né en 1940</span><p>APV et options réelles.</p></div>
+<div class="person"><b>Tim Koller</b><span class="y">—</span><p>Associé de McKinsey, auteur principal de <em>Valuation</em> ; la formule des value drivers.</p></div>
+<div class="person"><b>Aswath Damodaran</b><span class="y">né en 1957</span><p>« Doyen de la valorisation ». Récit et chiffres ; données gratuites pour le monde entier.</p></div>
+<div class="person"><b>Henry Kravis & George Roberts</b><span class="y">né en 1944 · né en 1943</span><p>Cofondateurs de KKR ; ont construit le modèle LBO du private equity.</p></div>
+</div>
+
+<h2 id="core"><span class="part">Partie 3 · Le cœur du sujet</span>Toute la mécanique de la valorisation</h2>
+
+<h3 id="process">3.1 Le processus de valorisation</h3>
+<ol>
+<li><strong>Définir la question</strong> : valeur pour qui et pour quoi ? Une participation minoritaire dans une société cotée (valeur de marché), une participation de contrôle (valeur de contrôle), une liquidation, un cas fiscal ou juridique. Le « standard de valeur » change la réponse.</li>
+<li><strong>Comprendre l'entreprise et écrire l'histoire</strong> : taille du marché, croissance, position concurrentielle, marges à maturité, besoins de réinvestissement, risques. Le test de Damodaran : l'histoire doit être <em>possible</em>, <em>plausible</em> et <em>probable</em>.</li>
+<li><strong>Traduire l'histoire en chiffres</strong> : croissance du chiffre d'affaires, marge cible, ratio ventes/capital (réinvestissement), risque (taux d'actualisation), probabilité d'échec.</li>
+<li><strong>Valoriser avec plusieurs méthodes</strong> (DCF, multiples, transactions, LBO si pertinent).</li>
+<li><strong>Vérifier la cohérence et la sensibilité</strong> ; comparer au prix de marché ; expliquer l'écart.</li>
+<li><strong>Conclure par une fourchette</strong> et les facteurs clés qui la feraient changer.</li>
+</ol>
+
+<h3 id="rates">3.2 Le taux d'actualisation en profondeur</h3>
+
+<h4>Taux sans risque : la bonne devise</h4>
+<p>Le taux sans risque doit être dans la <strong>même devise que les flux</strong> et correspondre à peu près à leur durée. Un DCF en CHF utilise le rendement des obligations de la Confédération (très bas) ; un DCF en USD utilise les Treasuries. Mélanger un taux sans risque en CHF avec des flux en USD (ou avec l'inflation américaine dans la croissance) est une erreur classique. Règle : <strong>l'inflation dans les flux doit être égale à l'inflation dans le taux d'actualisation</strong>.</p>
+
+<h4>Prime de risque actions (ERP) : historique vs implicite</h4>
+<ul>
+<li><strong>ERP historique</strong> : rendement excédentaire moyen passé des actions sur les obligations (environ 4–6 % selon le pays et la période). Très bruitée et tournée vers le passé.</li>
+<li><strong>ERP implicite</strong> (Damodaran) : prendre le niveau actuel de l'indice et les flux attendus vers les actionnaires (dividendes + rachats) qui croissent aux taux attendus, puis trouver le taux d'actualisation qui égalise leur valeur actuelle avec l'indice. ERP = ce taux − taux sans risque. Elle est tournée vers l'avenir et change chaque jour avec le marché.</li>
+</ul>
+\[ \text{Niveau de l'indice} = \sum_{t=1}^{5}\frac{CF_t}{(1+r)^t} + \frac{CF_5\,(1+g)}{(r-g)(1+r)^5} \quad\Rightarrow\quad \text{ERP}_{\text{implicite}} = r - r_f \]
+
+<h4>Prime de risque pays</h4>
+<p>Les entreprises actives dans des pays plus risqués méritent un taux d'actualisation plus élevé. Une méthode courante :</p>
+\[ \text{CRP} = \text{Spread de défaut souverain} \times \frac{\sigma_{\text{marché actions}}}{\sigma_{\text{obligations d'État}}} \]
+<p>Exemple : les obligations en dollars d'un pays cotent 2 % au-dessus des Treasuries ; son marché actions est 1,5 fois plus volatil que ses obligations → CRP ≈ 3 %. Applique-la selon l'endroit où l'entreprise <em>opère</em> (chiffre d'affaires), pas selon celui où elle est cotée.</p>
+
+<h4>Bêta : le bottom-up est meilleur</h4>
+<p>Le bêta de régression d'une seule entreprise a une grande erreur-type. Mieux : prendre le bêta <strong>désendetté</strong> moyen de nombreuses entreprises comparables, puis le réendetter avec le ratio dette/fonds propres propre à l'entreprise :</p>
+\[ \beta_U = \frac{\beta_L}{1 + (1-t)\,D/E} \qquad\qquad \beta_L = \beta_U\left[1 + (1-t)\,\frac{D}{E}\right] \]
+
+<h4>Coût de la dette</h4>
+<p>Utilise le rendement des obligations long terme de l'entreprise, ou une <strong>notation synthétique</strong> : estimer la notation à partir de la couverture des intérêts (EBIT / intérêts), puis ajouter le spread typique de cette notation au taux sans risque. Coût de la dette après impôt = \(r_D(1-t)\). Les locations sont de la dette.</p>
+
+<h4>Les pondérations</h4>
+<p>Utilise des <strong>valeurs de marché</strong> (ou une structure cible), pas des valeurs comptables. Une entreprise avec 10 de fonds propres comptables et 200 de capitalisation est surtout financée par des fonds propres, quoi qu'en dise son bilan.</p>
+
+<div class="box warn"><span class="bt">Prime de taille et « primes d'ajustement »</span>
+<p>Beaucoup de praticiens ajoutent une « prime de taille » ou une « prime spécifique » de plusieurs pourcents au coût des fonds propres des petites entreprises. Attention : la preuve d'une prime de taille s'est beaucoup affaiblie depuis les années 1980, et les primes arbitraires cachent souvent une incertitude qui devrait plutôt figurer dans les flux (scénarios, probabilité d'échec).</p></div>
+
+<h3 id="cashflows">3.3 Les flux de trésorerie en profondeur</h3>
+<ul>
+<li><strong>Partir du chiffre d'affaires, pas du bénéfice</strong> : croissance du CA × marge opérationnelle cible → EBIT → NOPAT. La trajectoire de marge vers la maturité est souvent l'hypothèse la plus importante.</li>
+<li><strong>Réinvestissement via le ratio ventes/capital</strong> : \(\text{Réinvestissement}_t = \Delta\text{CA}_t / (\text{Ventes/Capital})\). Cela oblige à payer la croissance et garde un ROIC réaliste.</li>
+<li><strong>Capex de maintien vs de croissance</strong> : une entreprise mature a encore besoin de capex à peu près égaux aux amortissements (plus avec l'inflation).</li>
+<li><strong>Normaliser</strong> : retirer les éléments exceptionnels, utiliser des marges de milieu de cycle pour les cycliques.</li>
+<li><strong>La rémunération en actions</strong> est une vraie charge : garde-la dans les coûts (ne la rajoute pas), sinon tu surévalues les entreprises qui paient leurs employés en actions.</li>
+<li><strong>La R&amp;D</strong> est un investissement : Damodaran la capitalise (ajoute l'actif de recherche au capital investi et l'amortit), ce qui augmente à la fois les bénéfices et le capital investi et donne un ROIC plus juste pour la tech et la pharma.</li>
+<li><strong>Convention de mi-année</strong> : les flux arrivent pendant l'année, pas à la fin ; actualise à \(t - 0.5\). Cela ajoute environ une demi-année de WACC à la valeur.</li>
+</ul>
+
+<h3 id="terminal">3.4 La valeur terminale : là où se trouve l'essentiel de la valeur</h3>
+<p>Trois façons, qui doivent être cohérentes :</p>
+<div class="box formula"><span class="bt">Formules · Valeur terminale</span>
+\[ TV_N = \frac{\text{FCFF}_{N+1}}{\text{WACC} - g} \qquad TV_N = \frac{\text{NOPAT}_{N+1}\,(1 - g/\text{RONIC})}{\text{WACC} - g} \qquad TV_N = \text{EBITDA}_N \times \text{Multiple de sortie} \]
+<p>La deuxième (value drivers) est la plus honnête : elle force le réinvestissement à correspondre à la croissance. Hypothèses typiques pour une entreprise mature : \(g\) ≤ taux sans risque long (ou croissance nominale du PIB), RONIC proche du WACC pour une entreprise moyenne (la concurrence érode les rendements excédentaires) ou un peu au-dessus pour les entreprises au moat durable.</p></div>
+<ul>
+<li>Si la valeur terminale représente 75–85 % du total, c'est normal pour une entreprise en croissance — mais cela veut dire que tes hypothèses de <em>long terme</em> dominent.</li>
+<li>Vérifie le <strong>multiple de sortie implicite</strong> de ta valeur terminale de Gordon et la <strong>croissance implicite</strong> de ton multiple de sortie. Si une croissance de 2 % implique un EV/EBITDA de sortie de 25×, quelque chose est incohérent.</li>
+</ul>
+
+<h3 id="bridge">3.5 De la valeur d'entreprise à la valeur par action</h3>
+<table>
+<thead><tr><th>Étape</th><th>Commentaire</th></tr></thead>
+<tbody>
+<tr><td>Valeur d'entreprise (DCF des FCFF)</td><td>Valeur des opérations</td></tr>
+<tr><td>+ Trésorerie et actifs hors exploitation</td><td>Trésorerie excédentaire, placements financiers, participations dans des sociétés associées (en valeur de marché)</td></tr>
+<tr><td>− Dette (en valeur de marché)</td><td>Obligations, emprunts</td></tr>
+<tr><td>− Dettes de location</td><td>Si les locations ont été traitées comme de la dette dans le FCFF</td></tr>
+<tr><td>− Engagements de retraite non financés (après impôt)</td><td>Une dette envers les anciens employés</td></tr>
+<tr><td>− Intérêts minoritaires (en valeur de marché)</td><td>Parts de filiales détenues par d'autres</td></tr>
+<tr><td>− Valeur des options des employés et des convertibles</td><td>Créances sur les fonds propres</td></tr>
+<tr class="tot"><td>= Valeur des fonds propres ÷ actions</td><td>Valeur par action</td></tr>
+</tbody></table>
+<div class="box formula"><span class="bt">Formule · Méthode du rachat d'actions (actions diluées)</span>
+\[ N_{\text{diluées}} = N_{\text{de base}} + N_{\text{options}} \times \left(1 - \frac{K}{P}\right) \quad \text{pour les options dans la monnaie} \]
+<p>Suppose que l'entreprise utilise le produit de l'exercice pour racheter des actions. Exemple : 100 millions d'actions, 10 millions d'options avec un prix d'exercice de 30, cours de 50 → 100 + 10 × (1 − 30/50) = <strong>104 millions</strong> d'actions diluées. (Une méthode plus exacte valorise les options avec un modèle d'options et soustrait leur valeur des fonds propres.)</p></div>
+
+<h3 id="multiples">3.6 La valorisation relative bien faite</h3>
+<ol>
+<li><strong>Choisir de vrais comparables</strong> : croissance, risque, marges et besoins de réinvestissement similaires — pas seulement « même secteur ».</li>
+<li><strong>Utiliser des définitions cohérentes</strong> : même période (12 prochains mois), mêmes retraitements comptables, EV avec des grandeurs d'EV.</li>
+<li><strong>Regarder la distribution</strong> : utiliser la médiane, ou la moyenne harmonique pour des ratios comme le P/E (elle réduit l'effet des multiples très élevés).</li>
+<li><strong>Contrôler les fondamentaux</strong> : une simple régression sur les pairs — par ex. EV/EBITDA contre croissance attendue et ROIC — dit quel multiple une entreprise « mérite » compte tenu de ses fondamentaux.</li>
+<li><strong>Expliquer l'écart</strong> : l'entreprise est-elle moins chère parce qu'elle est moins bonne, ou parce que le marché se trompe ?</li>
+</ol>
+<p>Les <strong>comparables boursiers</strong> utilisent les prix de marché de pairs cotés (participations minoritaires). Les <strong>transactions comparables</strong> utilisent les prix payés lors d'acquisitions ; ils incluent une <strong>prime de contrôle</strong> (souvent 20–40 % au-dessus du cours avant l'annonce) car l'acheteur prend le contrôle et attend des synergies.</p>
+
+<h3 id="sotp">3.7 Somme des parties et décote de holding</h3>
+<p>Pour les conglomérats et les holdings, valorise chaque division séparément (avec son propre multiple ou DCF), additionne, puis soustrais la dette nette et les coûts centraux (capitalisés). Le marché valorise souvent les conglomérats <strong>en dessous</strong> de la somme de leurs parties — une <strong>décote de conglomérat ou de holding</strong> de 10–30 % — à cause de la complexité, d'une mauvaise allocation du capital, des impôts en cas de scission et du manque de contrôle. Les activistes ciblent souvent ces décotes et poussent à des scissions.</p>
+
+<h3 id="special">3.8 Les cas difficiles</h3>
+<table>
+<thead><tr><th>Cas</th><th>Problème</th><th>Comment font les professionnels</th></tr></thead>
+<tbody>
+<tr><td><strong>Banques</strong></td><td>La dette est une matière première, pas un financement ; le FCF est difficile à définir</td><td>Valoriser directement les fonds propres : actualisation des dividendes ou modèle des rendements excédentaires. Relation clé : \(P/\text{TBV} = (\text{ROTE} - g)/(r_E - g)\).</td></tr>
+<tr><td><strong>Assureurs</strong></td><td>Engagements de long terme, revenus de placement</td><td>Embedded value (vie), P/B vs ROE, ratio combiné (non-vie).</td></tr>
+<tr><td><strong>Immobilier</strong></td><td>La valeur est dans les actifs</td><td>Actif net réévalué (ANR) à partir des expertises ; taux de capitalisation ; multiples de FFO.</td></tr>
+<tr><td><strong>Jeunes entreprises / déficitaires</strong></td><td>Pas de bénéfices, incertitude énorme</td><td>DCF basé sur le chiffre d'affaires avec une marge cible à maturité, un fort réinvestissement et une <strong>probabilité d'échec</strong> explicite ; scénarios.</td></tr>
+<tr><td><strong>Cycliques et matières premières</strong></td><td>Les profits suivent le cycle</td><td>Bénéfices et marges normalisés (milieu de cycle) ; valorisation aux prix de long terme des matières premières.</td></tr>
+<tr><td><strong>Entreprises en difficulté</strong></td><td>Le DCF de continuité ignore la faillite</td><td>Valeur = P(survie) × valeur de continuité + P(faillite) × valeur de liquidation ; ou traiter les actions comme une option.</td></tr>
+<tr><td><strong>Sociétés non cotées</strong></td><td>Pas de prix de marché, pas de liquidité</td><td>Mêmes méthodes, plus une <strong>décote d'illiquidité</strong> (souvent 20–30 %) pour les participations minoritaires ; bêta total si le propriétaire n'est pas diversifié.</td></tr>
+<tr><td><strong>Start-up (capital-risque)</strong></td><td>Seulement une sortie future</td><td><strong>Méthode VC</strong> : valeur post-money = valeur de sortie attendue / (1 + rendement cible)ⁿ.</td></tr>
+</tbody></table>
+<div class="box example"><span class="bt">Exemple : la méthode VC</span>
+<p>Une start-up pourrait valoir 500 millions de CHF à la sortie dans 5 ans. Le fonds de capital-risque vise 50 % de rendement annuel (pour compenser les nombreux échecs). Valeur post-money aujourd'hui = 500 / 1,5⁵ ≈ <strong>66 millions de CHF</strong>. Si le fonds investit 10 millions, il demande environ 10/66 ≈ 15 % de l'entreprise.</p></div>
+
+<h3 id="lbo">3.9 L'analyse LBO : comment le private equity valorise une entreprise</h3>
+<p>Dans un <strong>LBO</strong> (leveraged buyout, rachat avec effet de levier), un fonds de private equity achète une entreprise avec beaucoup de dette, utilise les flux de trésorerie de l'entreprise pour rembourser cette dette, améliore l'activité et revend après 3 à 7 ans. Le modèle LBO répond à : <em>quel est le prix maximum qu'on peut payer tout en atteignant notre rendement cible (souvent un TRI de 20 %+) ?</em> Il donne une valorisation « plancher » pour toute entreprise qu'un acheteur financier pourrait racheter.</p>
+
+<div class="box example"><span class="bt">Exemple : un LBO simple</span>
+<p><strong>Entrée</strong> : EBITDA 100, achat à 10× → EV 1 000, financé par 600 de dette (6× l'EBITDA, 6 % d'intérêt) et 400 de fonds propres.<br>
+<strong>Exploitation</strong> : l'EBITDA croît de 5 % par an ; 50 % de l'EBITDA devient du cash avant intérêts ; les intérêts après impôt sont payés et tout le cash restant rembourse la dette.</p>
+<table>
+<thead><tr><th>Année</th><th class="r">EBITDA</th><th class="r">Cash pour rembourser</th><th class="r">Dette en fin d'année</th></tr></thead>
+<tbody>
+<tr><td>0</td><td class="r">100,0</td><td class="r">—</td><td class="r">600,0</td></tr>
+<tr><td>1</td><td class="r">105,0</td><td class="r">23,7</td><td class="r">576,3</td></tr>
+<tr><td>2</td><td class="r">110,3</td><td class="r">27,5</td><td class="r">548,8</td></tr>
+<tr><td>3</td><td class="r">115,8</td><td class="r">31,5</td><td class="r">517,3</td></tr>
+<tr><td>4</td><td class="r">121,6</td><td class="r">35,9</td><td class="r">481,4</td></tr>
+<tr><td>5</td><td class="r">127,6</td><td class="r">40,7</td><td class="r">440,6</td></tr>
+</tbody></table>
+<p><strong>Sortie</strong> après 5 ans au même multiple de 10× : EV = 1 276 ; fonds propres = 1 276 − 441 = <strong>836</strong>.<br>
+<strong>MOIC</strong> (multiple du capital investi) = 836 / 400 = <strong>2,1×</strong> ; <strong>TRI</strong> = 2,09^(1/5) − 1 ≈ <strong>15,9 %</strong>.</p>
+<p><strong>Décomposition de la création de valeur</strong> : croissance de l'EBITDA (+27,6 × 10 = +276) + remboursement de la dette (+159) + variation du multiple (0) = +436 de valeur des fonds propres. Si le fonds pouvait aussi sortir à 11×, les fonds propres vaudraient environ 963 → TRI ≈ 19 %. C'est pourquoi les fonds de PE aiment acheter bon marché et revendre plus cher (« arbitrage de multiple ») — et pourquoi des taux plus élevés (dette plus chère, multiples de sortie plus bas) leur font mal.</p></div>
+
+<div class="box formula"><span class="bt">Formules · TRI et MOIC</span>
+\[ \text{MOIC} = \frac{\text{Fonds propres à la sortie} + \text{dividendes reçus}}{\text{Fonds propres investis}} \qquad \text{TRI} : \; \sum_t \frac{CF_t}{(1+\text{TRI})^t} = 0 \;\Rightarrow\; \text{TRI} = \text{MOIC}^{1/n} - 1 \text{ (une entrée, une sortie)} \]</div>
+
+<h3 id="options">3.10 Options réelles et valorisation optionnelle</h3>
+<p>Une partie de la valeur vient de la <strong>flexibilité</strong> : le droit, mais pas l'obligation, de faire quelque chose plus tard. Un DCF basé sur un seul scénario attendu la rate.</p>
+<ul>
+<li><strong>Option d'expansion</strong> : une première usine qui ouvre la porte à un grand marché.</li>
+<li><strong>Option d'attente</strong> : un gisement pétrolier non exploité ou un brevet — on n'investit que si les prix ou la demande deviennent attractifs.</li>
+<li><strong>Option d'abandon</strong> : vendre ou fermer un projet qui échoue limite les pertes.</li>
+</ul>
+<div class="box formula"><span class="bt">Formule · Black-Scholes (option d'achat)</span>
+\[ C = S\,N(d_1) - K e^{-rT} N(d_2), \qquad d_1 = \frac{\ln(S/K) + (r + \sigma^2/2)\,T}{\sigma\sqrt{T}}, \qquad d_2 = d_1 - \sigma\sqrt{T} \]
+<p>Pour une option réelle : \(S\) = valeur actuelle des flux du projet, \(K\) = coût de l'investissement, \(T\) = temps pendant lequel on peut attendre (par ex. durée du brevet), \(\sigma\) = volatilité de la valeur du projet, \(r\) = taux sans risque, \(N(\cdot)\) = fonction de répartition de la loi normale.</p></div>
+<div class="box example"><span class="bt">Exemple : un brevet</span>
+<p>Un brevet de médicament donne 5 ans pour lancer un produit. Valeur actuelle des flux du produit aujourd'hui : 100 ; coût de lancement : 120 ; volatilité 40 % ; taux sans risque 3 %. Une VAN statique donne 100 − 120 = <strong>−20</strong> : sans valeur. Mais le droit d'attendre et de ne lancer que si tout va bien vaut \(d_1 = 0.411\), \(d_2 = -0.483\), \(N(d_1) = 0.659\), \(N(d_2) = 0.314\) → \(C = 100 \times 0.659 - 120\,e^{-0.15} \times 0.314 \approx\) <strong>33,5</strong>. La flexibilité transforme un « mauvais » projet en actif de valeur.</p></div>
+<p><strong>Les actions comme option</strong> : pour une entreprise très endettée, les actions sont une option d'achat sur les actifs de l'entreprise avec un prix d'exercice égal à la valeur nominale de la dette (Merton). Même si les actifs valent aujourd'hui moins que la dette, les actions gardent une valeur grâce à la chance que les actifs se redressent — c'est pourquoi les actions d'entreprises proches de la faillite cotent rarement zéro.</p>
+
+<h3 id="triangulate">3.11 Triangulation et « football field »</h3>
+<p>Les professionnels présentent le résultat sous forme de graphique des fourchettes de valeur de chaque méthode — le <strong>football field</strong> : fourchette de cours sur 52 semaines, objectifs des analystes, comparables boursiers, transactions comparables, DCF (avec sensibilité), LBO. La conclusion finale est une fourchette où les méthodes les plus fiables se recoupent, avec une explication claire de la méthode la plus pondérée et pourquoi.</p>
+
+<div class="box warn"><span class="bt">Les erreurs de valorisation les plus fréquentes</span>
+<ul>
+<li>De la croissance sans réinvestissement (ou un ROIC qui monte à des niveaux irréalistes dans les prévisions).</li>
+<li>Inflation ou devise incohérentes entre les flux et le taux d'actualisation.</li>
+<li>Croissance terminale supérieure au taux sans risque ou à la croissance nominale du PIB.</li>
+<li>Rajouter la rémunération en actions ; ignorer la dilution, les locations ou les retraites.</li>
+<li>Compter deux fois le risque (taux d'actualisation plus élevé <em>et</em> flux pessimistes pour le même risque).</li>
+<li>Biais : partir de la réponse que veut le client ou ta thèse, puis ajuster les paramètres. Remède : fixer les hypothèses avant de voir le résultat ; les faire challenger par quelqu'un.</li>
+<li>Fausse précision : valoriser au centime quelque chose dont l'incertitude est de ±30 %.</li>
+</ul></div>
+
+<h2 id="check"><span class="part">Partie 4 · Teste-toi</span>Questions pour vérifier ta compréhension</h2>
+<details class="q"><summary>1. Tu valorises une entreprise suisse avec des flux en CHF mais tu utilises le rendement de 4 % des Treasuries comme taux sans risque. Qu'est-ce qui ne va pas ?</summary><p>Incohérence de devise. Les flux en CHF intègrent l'inflation suisse, bien plus basse ; le taux d'actualisation doit utiliser un taux sans risque en CHF. Sinon l'entreprise est sous-évaluée.</p></details>
+<details class="q"><summary>2. Une entreprise a 50 millions d'actions et 5 millions d'options avec un prix d'exercice de 40 ; l'action cote 80. Actions diluées avec la méthode du rachat d'actions ?</summary><p>50 + 5 × (1 − 40/80) = <strong>52,5 millions</strong>.</p></details>
+<details class="q"><summary>3. Pourquoi les transactions comparables donnent-elles en général des valeurs plus élevées que les comparables boursiers ?</summary><p>Elles incluent une prime de contrôle pour la prise de contrôle et les synergies attendues.</p></details>
+<details class="q"><summary>4. Dans un LBO, cite les trois sources de création de valeur pour les fonds propres.</summary><p>L'amélioration opérationnelle (croissance de l'EBITDA), le remboursement de la dette (désendettement) et l'expansion du multiple à la sortie.</p></details>
+<details class="q"><summary>5. Un gisement pétrolier non exploité a une VAN statique négative. Pourquoi peut-il quand même valoir beaucoup ?</summary><p>C'est une option de développer plus tard : si le pétrole monte, le gisement devient rentable ; sinon, on n'investit pas. Une forte volatilité et une longue échéance augmentent la valeur de l'option.</p></details>
+<details class="q"><summary>6. Un fonds VC attend une sortie à 300 millions de CHF dans 4 ans et vise 40 % par an. Valeur post-money aujourd'hui ?</summary><p>300 / 1,4⁴ ≈ <strong>78 millions de CHF</strong>.</p></details>
+<details class="q"><summary>7. Comment valoriser une banque, et pourquoi pas avec l'EV/EBITDA ?</summary><p>Pour une banque, la dette et les dépôts sont une matière première d'exploitation, donc la « valeur d'entreprise » et l'EBITDA n'ont pas de sens. Valorise directement les fonds propres avec les dividendes ou les rendements excédentaires (ROE vs coût des fonds propres), et utilise le P/TBV vs ROTE.</p></details>
+
+<h2 id="glossary"><span class="part">Partie 5 · Glossaire</span>Termes clés</h2>
+<dl class="gloss">
+<dt>APV</dt><dd>Valeur actuelle ajustée : valeur sans dette + valeur de l'avantage fiscal − coûts de détresse.</dd>
+<dt>Décote de holding</dt><dd>Écart entre la valeur de marché d'un groupe et la somme de ses parties.</dd>
+<dt>Décote d'illiquidité</dt><dd>Baisse de valeur des actifs difficiles à vendre.</dd>
+<dt>ERP implicite</dt><dd>Prime de risque actions implicite dans les prix actuels.</dd>
+<dt>Football field</dt><dd>Graphique comparant les fourchettes de valeur des différentes méthodes.</dd>
+<dt>LBO</dt><dd>Rachat financé principalement par la dette.</dd>
+<dt>Méthode du rachat d'actions</dt><dd>Façon de compter la dilution des options dans la monnaie.</dd>
+<dt>Méthode VC</dt><dd>Valorisation d'une start-up à partir de la valeur de sortie et du rendement cible.</dd>
+<dt>MOIC</dt><dd>Multiple du capital investi.</dd>
+<dt>Notation synthétique</dt><dd>Notation de crédit estimée à partir de la couverture des intérêts.</dd>
+<dt>Option réelle</dt><dd>Flexibilité dans un investissement réel (expansion, attente, abandon).</dd>
+<dt>Prime de contrôle</dt><dd>Prix supplémentaire payé pour prendre le contrôle d'une entreprise.</dd>
+<dt>Prime de risque pays</dt><dd>Rendement supplémentaire pour opérer dans un pays plus risqué.</dd>
+<dt>Ratio ventes/capital</dt><dd>Chiffre d'affaires généré par unité de capital investi ; détermine le réinvestissement.</dd>
+<dt>Somme des parties</dt><dd>Valoriser chaque division séparément et les additionner.</dd>
+<dt>Transactions comparables</dt><dd>Valorisation à partir des prix payés lors d'acquisitions passées.</dd>
+<dt>TRI</dt><dd>Taux de rendement interne : taux d'actualisation qui annule la VAN.</dd>
+</dl>
+
+<div class="box key"><span class="bt">Pour aller plus loin</span>
+<p>Koller, Goedhart &amp; Wessels, <em>Valuation</em> (McKinsey) · Damodaran, <em>Investment Valuation</em>, <em>The Dark Side of Valuation</em> et <em>Narrative and Numbers</em> · Rosenbaum &amp; Pearl, <em>Investment Banking: Valuation, LBOs and M&amp;A</em> · Site de Damodaran (données sur l'ERP, les bêtas et les multiples, mises à jour chaque janvier).</p></div>
