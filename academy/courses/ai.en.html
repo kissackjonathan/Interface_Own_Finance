@@ -1,0 +1,129 @@
+<h2 id="brief"><span class="part">Part 1 · In brief</span>What is AI, really?</h2>
+
+<p><strong>Artificial intelligence</strong> is the ability of computers to do tasks that normally need human intelligence: understanding language, recognising images, writing code, planning. Today's AI boom is driven by one family of techniques — <strong>deep learning</strong> — and especially by <strong>large language models (LLMs)</strong> such as ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google), Llama (Meta), DeepSeek and Qwen (China) or Mistral (France).</p>
+
+<div class="box key"><span class="bt">The one idea to remember</span>
+<p>An LLM is a giant statistical model trained on a huge amount of text to <strong>predict the next word</strong>. Doing this extremely well, with enough data and computing power, produces surprisingly general abilities. The economics of AI are therefore the economics of <strong>compute</strong>: chips, data centres and electricity — which is why trillions of dollars are being invested, and why investors ask whether it is a bubble.</p></div>
+
+<h2 id="terms"><span class="part">Part 2 · Key terms</span>The vocabulary, made simple</h2>
+<dl class="gloss">
+<dt>Machine learning (ML)</dt><dd>Programs that learn patterns from data instead of following hand-written rules.</dd>
+<dt>Neural network</dt><dd>A model made of layers of simple calculations ("neurons") connected by numbers called weights.</dd>
+<dt>Deep learning</dt><dd>Neural networks with many layers; the basis of modern AI.</dd>
+<dt>Parameters (weights)</dt><dd>The numbers the model learns. Frontier models have hundreds of billions to trillions.</dd>
+<dt>Training</dt><dd>Adjusting the parameters on huge datasets; extremely expensive (months on tens of thousands of chips).</dd>
+<dt>Inference</dt><dd>Using a trained model to answer a request. Each answer costs compute; inference now represents most of AI computing demand.</dd>
+<dt>Transformer</dt><dd>The architecture behind all LLMs (Google, 2017). Its "attention" mechanism lets the model relate every word to every other word.</dd>
+<dt>Token</dt><dd>A piece of a word (roughly ¾ of a word in English). Models read and write tokens; usage is priced per million tokens.</dd>
+<dt>Context window</dt><dd>How many tokens the model can consider at once (a long document, a codebase).</dd>
+<dt>Pre-training</dt><dd>First training phase on internet-scale text to learn language and knowledge.</dd>
+<dt>Fine-tuning / RLHF</dt><dd>Further training to follow instructions and be helpful and safe, using human feedback (reinforcement learning from human feedback) or AI feedback.</dd>
+<dt>Reasoning models</dt><dd>Models trained to "think" step by step before answering, spending more compute at inference for harder problems.</dd>
+<dt>Foundation / frontier model</dt><dd>A large general model on which many applications are built; "frontier" = the most capable ones.</dd>
+<dt>Open-weight vs closed</dt><dd>Open-weight models publish their parameters (Llama, DeepSeek, Qwen, Mistral); closed models are only accessible through an API or app (GPT, Claude, Gemini).</dd>
+<dt>Multimodal</dt><dd>Handles text, images, audio and video.</dd>
+<dt>Agent</dt><dd>An AI that takes actions — uses tools, browses, writes and runs code — to complete multi-step tasks.</dd>
+<dt>Hallucination</dt><dd>When a model confidently produces false information.</dd>
+<dt>Scaling laws</dt><dd>The empirical finding that models improve predictably with more data, parameters and compute.</dd>
+<dt>GPU / accelerator</dt><dd>Chips that do many calculations in parallel (Nvidia GPUs, Google TPUs, Amazon Trainium, AMD Instinct).</dd>
+<dt>HBM</dt><dd>High-bandwidth memory stacked next to AI chips (SK Hynix, Samsung, Micron) — a key bottleneck.</dd>
+<dt>Hyperscaler</dt><dd>Giant cloud providers: Amazon (AWS), Microsoft (Azure), Google (Cloud), plus Meta and Oracle for AI capacity.</dd>
+<dt>Neocloud</dt><dd>New companies renting GPU capacity (CoreWeave, Nebius, Lambda…), often financed with debt.</dd>
+<dt>AGI</dt><dd>Artificial general intelligence: AI as capable as humans across most tasks. No agreed definition or date.</dd>
+</dl>
+
+<h2 id="history"><span class="part">Part 3 · History</span>Seventy years from theory to ChatGPT</h2>
+<ol class="timeline">
+<li><span class="d">1950</span><b>Alan Turing</b> asks "Can machines think?" and proposes the imitation game (Turing test).</li>
+<li><span class="d">1956</span>The <b>Dartmouth workshop</b> (John McCarthy, Marvin Minsky, Claude Shannon) coins the term "artificial intelligence".</li>
+<li><span class="d">1958</span><b>Frank Rosenblatt</b>'s perceptron, an early neural network.</li>
+<li><span class="d">1970s–80s</span><b>AI winters</b>: promises fail, funding collapses. Expert systems have a short boom.</li>
+<li><span class="d">1986</span><b>Rumelhart, Hinton and Williams</b> popularise backpropagation, the method used to train neural networks.</li>
+<li><span class="d">1997</span>IBM's <b>Deep Blue</b> beats world chess champion Garry Kasparov.</li>
+<li><span class="d">2006</span>Nvidia launches <b>CUDA</b>, making GPUs programmable for general computing — the hardware foundation of deep learning.</li>
+<li><span class="d">2009–12</span><b>Fei-Fei Li</b>'s ImageNet dataset; in 2012 <b>AlexNet</b> (Krizhevsky, Sutskever, Hinton), trained on two Nvidia GPUs, wins the image-recognition contest by a large margin. The deep learning revolution starts.</li>
+<li><span class="d">2014</span>Google buys <b>DeepMind</b> (Demis Hassabis). In 2016 its <b>AlphaGo</b> beats Go champion Lee Sedol.</li>
+<li><span class="d">2015</span><b>OpenAI</b> is founded as a non-profit (Sam Altman, Elon Musk, Ilya Sutskever, Greg Brockman and others).</li>
+<li><span class="d">2017</span>Google researchers publish <b>"Attention Is All You Need"</b> — the Transformer.</li>
+<li><span class="d">2019–20</span>Microsoft invests in OpenAI; <b>GPT-3</b> (2020) shows the power of scaling.</li>
+<li><span class="d">2021</span><b>Anthropic</b> is founded by Dario and Daniela Amodei and other former OpenAI researchers, with a focus on AI safety.</li>
+<li><span class="d">30 Nov 2022</span><b>ChatGPT</b> launches and becomes the fastest-growing consumer app in history. The generative AI boom begins.</li>
+<li><span class="d">2023–24</span>GPT-4, Claude, Gemini, Llama. Nvidia becomes one of the most valuable companies in the world. The EU adopts the <b>AI Act</b> (2024). Nobel Prizes go to AI pioneers: Physics to <b>Hinton</b> and <b>Hopfield</b>, Chemistry to <b>Hassabis</b> and <b>Jumper</b> (AlphaFold, protein structures).</li>
+<li><span class="d">Jan 2025</span><b>DeepSeek-R1</b>, a Chinese open-weight reasoning model said to have been trained cheaply, shocks markets; Nvidia loses about $590 billion of market value in one day.</li>
+<li><span class="d">2025–26</span>Reasoning models and agents; mega-deals for data centres (OpenAI's "Stargate"), circular financing between chipmakers, clouds and labs; private valuations of AI labs approach $1 trillion.</li>
+</ol>
+
+<div class="people">
+<div class="person"><b>Alan Turing</b><span class="y">1912–1954</span><p>Father of computer science; posed the question of machine intelligence.</p></div>
+<div class="person"><b>Geoffrey Hinton</b><span class="y">b. 1947</span><p>"Godfather of deep learning"; Turing Award 2018, Nobel 2024. Now warns about AI risks.</p></div>
+<div class="person"><b>Yann LeCun & Yoshua Bengio</b><span class="y">b. 1960 · b. 1964</span><p>Co-winners of the 2018 Turing Award with Hinton. LeCun (convolutional networks, ex-Meta chief AI scientist) is a sceptic of LLM-only paths; Bengio focuses on safety.</p></div>
+<div class="person"><b>Fei-Fei Li</b><span class="y">b. 1976</span><p>Created ImageNet, the dataset that launched modern computer vision.</p></div>
+<div class="person"><b>Jensen Huang</b><span class="y">b. 1963</span><p>Co-founder and CEO of Nvidia; bet early on GPUs for AI.</p></div>
+<div class="person"><b>Demis Hassabis</b><span class="y">b. 1976</span><p>Co-founder of DeepMind; AlphaGo, AlphaFold; Nobel 2024.</p></div>
+<div class="person"><b>Sam Altman</b><span class="y">b. 1985</span><p>CEO of OpenAI; drove ChatGPT and the massive compute build-out.</p></div>
+<div class="person"><b>Ilya Sutskever</b><span class="y">b. 1986</span><p>Co-creator of AlexNet, OpenAI co-founder; founded Safe Superintelligence (2024).</p></div>
+<div class="person"><b>Dario Amodei</b><span class="y">b. 1983</span><p>Co-founder and CEO of Anthropic (Claude).</p></div>
+<div class="person"><b>Liang Wenfeng</b><span class="y">b. 1985</span><p>Founder of the quant fund High-Flyer and of DeepSeek.</p></div>
+<div class="person"><b>Arthur Mensch</b><span class="y">b. 1992</span><p>Co-founder and CEO of Mistral AI, Europe's leading model maker.</p></div>
+</div>
+
+<h2 id="value"><span class="part">Part 4 · Where the money goes</span>The AI value chain</h2>
+<table>
+<thead><tr><th>Layer</th><th>Who</th><th>Economics</th></tr></thead>
+<tbody>
+<tr><td><strong>Energy &amp; infrastructure</strong></td><td>Utilities, power equipment, cooling (Vertiv, Schneider, Siemens Energy), data-centre builders</td><td>Power is becoming the main bottleneck; long-term contracts</td></tr>
+<tr><td><strong>Chips</strong></td><td>Nvidia, AMD, Broadcom (custom chips), TSMC (manufacturing), ASML (machines), SK Hynix/Samsung/Micron (HBM)</td><td>So far the biggest profit pool — Nvidia's margins are exceptional</td></tr>
+<tr><td><strong>Cloud / compute</strong></td><td>AWS, Azure, Google Cloud, Oracle, CoreWeave, Nebius</td><td>Huge capex; returns depend on utilisation and pricing</td></tr>
+<tr><td><strong>Models</strong></td><td>OpenAI, Anthropic, Google DeepMind, Meta, xAI, Mistral, DeepSeek, Alibaba</td><td>Very high training costs; fast-growing revenue; price competition</td></tr>
+<tr><td><strong>Applications</strong></td><td>Software firms, start-ups, every company using AI</td><td>Where productivity gains must ultimately show up</td></tr>
+</tbody></table>
+
+<h2 id="bubble"><span class="part">Part 5 · Bubble or not?</span>Following the money</h2>
+
+<h3 id="numbers">The scale of spending</h3>
+<ul>
+<li>The big US hyperscalers' capital expenditure, mostly for AI data centres, was around $400 billion in 2025. For 2026, Business Insider estimates spending by Amazon, Alphabet, Meta, Microsoft and SpaceX (which now includes xAI) at about $800–830 billion. Executives plan to spend more again in 2027.</li>
+<li>Capex now absorbs most of these companies' operating cash flow (estimates around 90% for 2026, versus about 40% in 2023). Free cash flow has fallen sharply at several of them, and they increasingly borrow. Examples: record bond issues, Meta's $27 billion off-balance-sheet financing with Blue Owl for a data centre (2025), and heavy debt at neoclouds such as CoreWeave.</li>
+<li>Valuations of the leading labs have exploded. OpenAI was valued at $852 billion after a $122 billion round in March 2026. Anthropic was valued at $965 billion after a $65 billion round in May 2026. Revenues grow very fast — tens of billions of dollars of annualised revenue — but both still spend far more than they earn on compute.</li>
+</ul>
+
+<h3 id="bear">Arguments for a bubble</h3>
+<ul>
+<li><strong>Revenue gap</strong>: in 2024 Sequoia's David Cahn asked "AI's $600 billion question". The end-user revenue needed to earn a return on the infrastructure is still far above what AI applications earn today.</li>
+<li><strong>Circular financing</strong>: chipmakers invest in labs that buy their chips. Examples: Nvidia's announced up to $100 billion investment in OpenAI (2025), AMD granting OpenAI warrants on its shares, and clouds investing in labs that commit to buying their cloud. Demand can look stronger than it really is.</li>
+<li><strong>Debt and off-balance-sheet structures</strong>: special-purpose vehicles, private credit and GPU-backed loans are spreading — reminiscent of the fibre-optic overbuild financed with debt before 2001.</li>
+<li><strong>Depreciation risk</strong>: AI chips may become obsolete in 3–5 years. If accounting assumes 6 years, profits look better than they are.</li>
+<li><strong>Concentration</strong>: a handful of AI-related stocks make up a large share of the S&amp;P 500. A disappointment would hit index investors everywhere.</li>
+<li><strong>Prominent warnings</strong>: in October 2026 investors such as Ray Dalio publicly called it a "classic bubble". Many surveys of fund managers name AI stocks as the most crowded trade.</li>
+</ul>
+
+<h3 id="bull">Arguments against (or "a bubble with real foundations")</h3>
+<ul>
+<li><strong>Real demand and revenue</strong>: cloud growth re-accelerated (Google Cloud grew more than 60% year-on-year in early 2026). Hyperscalers say they are "capacity constrained", and AI lab revenues grow several times per year.</li>
+<li><strong>Rich buyers</strong>: unlike the dot-com start-ups, most spending comes from some of the most profitable companies in history.</li>
+<li><strong>Falling costs drive usage</strong>: the price per token has fallen dramatically, which expands adoption (agents, coding, enterprise automation). As with past technologies, cheaper units have led to more total spending.</li>
+<li><strong>Valuations are not all extreme</strong>: Nvidia's forward P/E has often been lower than that of many software companies, thanks to its earnings growth.</li>
+</ul>
+
+<div class="box pm"><span class="bt">How a PM thinks about it</span>
+<p>Both can be true: AI can be a transformative technology <em>and</em> parts of the market can be overvalued. Railways and the internet changed the world, yet many investors in them lost money because too much capacity was built too fast with too much debt. Watch: (1) revenue of AI applications vs capex, (2) GPU rental prices and utilisation, (3) debt and credit spreads of neoclouds and data-centre financings, (4) whether capex guidance keeps rising, (5) power availability. Picks-and-shovels (chips, power) win first; the long-term winners are often not the first movers.</p></div>
+
+<h2 id="players"><span class="part">Part 6 · The global race</span>Where the main players stand</h2>
+<table>
+<thead><tr><th>Region</th><th>Strengths</th><th>Weaknesses / constraints</th><th>Key players</th></tr></thead>
+<tbody>
+<tr><td><strong>United States</strong></td><td>Leading labs, chips (Nvidia, AMD), clouds, capital markets, talent</td><td>Power and grid constraints, high costs, concentration risk</td><td>OpenAI, Anthropic, Google DeepMind, Meta, Microsoft, Amazon, xAI, Nvidia</td></tr>
+<tr><td><strong>China</strong></td><td>Strong open-weight models (DeepSeek, Qwen, Kimi, GLM), huge engineering talent, cheap energy, fast deployment, robotics</td><td>US export controls on advanced chips and chip-making tools; dependence on Huawei Ascend and SMIC</td><td>DeepSeek, Alibaba (Qwen), ByteDance (Doubao), Moonshot (Kimi), Zhipu (GLM), Baidu, Tencent, Huawei</td></tr>
+<tr><td><strong>Europe</strong></td><td>Regulation (AI Act), research, key equipment (ASML), sovereign-AI push. The EU plans up to seven "AI gigafactories": about €10 billion of public money, with at least €20 billion of private money expected (call opened July 2026)</td><td>Much smaller capital and compute, fragmented market, energy costs</td><td>Mistral AI (raised a record €3 billion Series D led by Samsung in September 2026), ASML, SAP, Nebius, Black Forest Labs, DeepL; Swiss research at ETH/EPFL</td></tr>
+<tr><td><strong>Taiwan / Korea / Japan</strong></td><td>Manufacturing of the chips and memory everyone needs</td><td>Geopolitical risk (Taiwan)</td><td>TSMC, SK Hynix, Samsung, Tokyo Electron, SoftBank (big OpenAI investor, owns Arm)</td></tr>
+<tr><td><strong>Gulf states</strong></td><td>Capital and cheap energy; building giant data centres</td><td>Depend on US chip export approvals</td><td>UAE (G42, MGX), Saudi Arabia (Humain)</td></tr>
+<tr><td><strong>India</strong></td><td>Talent, IT services, huge user base</td><td>Little frontier compute so far</td><td>Reliance, Tata, Infosys, TCS</td></tr>
+</tbody></table>
+
+<h2 id="check"><span class="part">Part 7 · Check yourself</span>Questions</h2>
+<details class="q"><summary>1. What is the difference between training and inference?</summary><p>Training builds the model by adjusting its parameters on huge datasets (a big one-off cost); inference is using the model to answer requests (a recurring cost per use).</p></details>
+<details class="q"><summary>2. Why is "circular financing" a warning sign?</summary><p>When suppliers invest in their own customers who then buy from them, reported demand and revenue can be inflated by the supplier's own money rather than by end-users.</p></details>
+<details class="q"><summary>3. Why did DeepSeek-R1 hit Nvidia's share price?</summary><p>It suggested strong models could be built with far less compute, raising fears that demand for expensive GPUs was overestimated.</p></details>
+
+<div class="box key"><span class="bt">Sources and to go further</span>
+<p>Numbers for 2025–26 come from company reports and press coverage (Business Insider, Bloomberg, Reuters, Euronews, Financial Times); they change quickly, so check the latest earnings. Reading: Mustafa Suleyman, <em>The Coming Wave</em> · Chris Miller, <em>Chip War</em> · Stanford HAI <em>AI Index</em> (annual) · Epoch AI (data on compute and models).</p></div>

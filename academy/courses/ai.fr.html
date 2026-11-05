@@ -1,0 +1,129 @@
+<h2 id="brief"><span class="part">Partie 1 · En bref</span>Qu'est-ce que l'IA, vraiment ?</h2>
+
+<p>L'<strong>intelligence artificielle</strong> est la capacité des ordinateurs à faire des tâches qui demandent normalement de l'intelligence humaine : comprendre le langage, reconnaître des images, écrire du code, planifier. Le boom actuel de l'IA repose sur une famille de techniques — l'<strong>apprentissage profond (deep learning)</strong> — et surtout sur les <strong>grands modèles de langage (LLM)</strong> comme ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google), Llama (Meta), DeepSeek et Qwen (Chine) ou Mistral (France).</p>
+
+<div class="box key"><span class="bt">L'idée à retenir</span>
+<p>Un LLM est un gigantesque modèle statistique entraîné sur une énorme quantité de texte pour <strong>prédire le mot suivant</strong>. Le faire extrêmement bien, avec assez de données et de puissance de calcul, produit des capacités étonnamment générales. L'économie de l'IA est donc l'économie du <strong>calcul</strong> : puces, data centers et électricité — c'est pourquoi des milliers de milliards de dollars sont investis, et pourquoi les investisseurs se demandent si c'est une bulle.</p></div>
+
+<h2 id="terms"><span class="part">Partie 2 · Les termes clés</span>Le vocabulaire, simplement</h2>
+<dl class="gloss">
+<dt>Machine learning (ML)</dt><dd>Programmes qui apprennent des régularités à partir de données au lieu de suivre des règles écrites à la main.</dd>
+<dt>Réseau de neurones</dt><dd>Modèle fait de couches de calculs simples (« neurones ») reliés par des nombres appelés poids.</dd>
+<dt>Deep learning</dt><dd>Réseaux de neurones à nombreuses couches ; la base de l'IA moderne.</dd>
+<dt>Paramètres (poids)</dt><dd>Les nombres que le modèle apprend. Les modèles de pointe en ont de centaines de milliards à des milliers de milliards.</dd>
+<dt>Entraînement</dt><dd>Ajuster les paramètres sur d'immenses jeux de données ; extrêmement coûteux (des mois sur des dizaines de milliers de puces).</dd>
+<dt>Inférence</dt><dd>Utiliser un modèle entraîné pour répondre à une requête. Chaque réponse coûte du calcul ; l'inférence représente désormais l'essentiel de la demande de calcul en IA.</dd>
+<dt>Transformer</dt><dd>L'architecture derrière tous les LLM (Google, 2017). Son mécanisme d'« attention » relie chaque mot à tous les autres.</dd>
+<dt>Token</dt><dd>Un morceau de mot (environ ¾ de mot en anglais). Les modèles lisent et écrivent des tokens ; l'usage se facture par million de tokens.</dd>
+<dt>Fenêtre de contexte</dt><dd>Combien de tokens le modèle peut prendre en compte à la fois (un long document, tout un code).</dd>
+<dt>Pré-entraînement</dt><dd>Première phase d'entraînement sur du texte à l'échelle d'internet pour apprendre la langue et les connaissances.</dd>
+<dt>Fine-tuning / RLHF</dt><dd>Entraînement supplémentaire pour suivre des instructions et être utile et sûr, grâce aux retours humains (apprentissage par renforcement à partir de retours humains) ou d'une IA.</dd>
+<dt>Modèles de raisonnement</dt><dd>Modèles entraînés à « réfléchir » étape par étape avant de répondre, en dépensant plus de calcul à l'inférence pour les problèmes difficiles.</dd>
+<dt>Modèle de fondation / de pointe</dt><dd>Grand modèle général sur lequel s'appuient de nombreuses applications ; « de pointe » (frontier) = les plus performants.</dd>
+<dt>Poids ouverts vs fermé</dt><dd>Les modèles à poids ouverts publient leurs paramètres (Llama, DeepSeek, Qwen, Mistral) ; les modèles fermés ne sont accessibles que via une API ou une application (GPT, Claude, Gemini).</dd>
+<dt>Multimodal</dt><dd>Traite texte, images, son et vidéo.</dd>
+<dt>Agent</dt><dd>Une IA qui agit — utilise des outils, navigue, écrit et exécute du code — pour accomplir des tâches en plusieurs étapes.</dd>
+<dt>Hallucination</dt><dd>Quand un modèle produit avec assurance une information fausse.</dd>
+<dt>Lois d'échelle</dt><dd>Le constat empirique que les modèles s'améliorent de façon prévisible avec plus de données, de paramètres et de calcul.</dd>
+<dt>GPU / accélérateur</dt><dd>Puces qui font beaucoup de calculs en parallèle (GPU Nvidia, TPU Google, Trainium d'Amazon, Instinct d'AMD).</dd>
+<dt>HBM</dt><dd>Mémoire à haute bande passante empilée à côté des puces d'IA (SK Hynix, Samsung, Micron) — un goulot d'étranglement clé.</dd>
+<dt>Hyperscaler</dt><dd>Géants du cloud : Amazon (AWS), Microsoft (Azure), Google (Cloud), plus Meta et Oracle pour les capacités d'IA.</dd>
+<dt>Neocloud</dt><dd>Nouvelles entreprises qui louent de la capacité GPU (CoreWeave, Nebius, Lambda…), souvent financées par la dette.</dd>
+<dt>AGI</dt><dd>Intelligence artificielle générale : une IA aussi capable que les humains dans la plupart des tâches. Pas de définition ni de date consensuelles.</dd>
+</dl>
+
+<h2 id="history"><span class="part">Partie 3 · Histoire</span>Soixante-dix ans de la théorie à ChatGPT</h2>
+<ol class="timeline">
+<li><span class="d">1950</span><b>Alan Turing</b> demande « Les machines peuvent-elles penser ? » et propose le jeu de l'imitation (test de Turing).</li>
+<li><span class="d">1956</span>L'<b>atelier de Dartmouth</b> (John McCarthy, Marvin Minsky, Claude Shannon) invente le terme « intelligence artificielle ».</li>
+<li><span class="d">1958</span>Le perceptron de <b>Frank Rosenblatt</b>, un des premiers réseaux de neurones.</li>
+<li><span class="d">1970s–80s</span>Les <b>hivers de l'IA</b> : les promesses échouent, les financements s'effondrent. Les systèmes experts connaissent un bref essor.</li>
+<li><span class="d">1986</span><b>Rumelhart, Hinton et Williams</b> popularisent la rétropropagation, la méthode d'entraînement des réseaux de neurones.</li>
+<li><span class="d">1997</span><b>Deep Blue</b> d'IBM bat le champion du monde d'échecs Garry Kasparov.</li>
+<li><span class="d">2006</span>Nvidia lance <b>CUDA</b>, qui rend les GPU programmables pour le calcul général — le socle matériel du deep learning.</li>
+<li><span class="d">2009–12</span>Le jeu de données ImageNet de <b>Fei-Fei Li</b> ; en 2012, <b>AlexNet</b> (Krizhevsky, Sutskever, Hinton), entraîné sur deux GPU Nvidia, gagne le concours de reconnaissance d'images avec une large avance. La révolution du deep learning commence.</li>
+<li><span class="d">2014</span>Google rachète <b>DeepMind</b> (Demis Hassabis). En 2016, son <b>AlphaGo</b> bat le champion de go Lee Sedol.</li>
+<li><span class="d">2015</span><b>OpenAI</b> est fondée comme organisation à but non lucratif (Sam Altman, Elon Musk, Ilya Sutskever, Greg Brockman et d'autres).</li>
+<li><span class="d">2017</span>Des chercheurs de Google publient <b>« Attention Is All You Need »</b> — le Transformer.</li>
+<li><span class="d">2019–20</span>Microsoft investit dans OpenAI ; <b>GPT-3</b> (2020) montre la puissance du passage à l'échelle.</li>
+<li><span class="d">2021</span><b>Anthropic</b> est fondée par Dario et Daniela Amodei et d'autres anciens chercheurs d'OpenAI, avec un accent sur la sécurité de l'IA.</li>
+<li><span class="d">30 nov. 2022</span><b>ChatGPT</b> est lancé et devient l'application grand public à la croissance la plus rapide de l'histoire. Le boom de l'IA générative commence.</li>
+<li><span class="d">2023–24</span>GPT-4, Claude, Gemini, Llama. Nvidia devient l'une des entreprises les plus valorisées au monde. L'UE adopte l'<b>AI Act</b> (2024). Des prix Nobel récompensent des pionniers de l'IA : physique pour <b>Hinton</b> et <b>Hopfield</b>, chimie pour <b>Hassabis</b> et <b>Jumper</b> (AlphaFold, structure des protéines).</li>
+<li><span class="d">Janv. 2025</span><b>DeepSeek-R1</b>, un modèle de raisonnement chinois à poids ouverts présenté comme entraîné à bas coût, choque les marchés ; Nvidia perd environ 590 milliards de dollars de capitalisation en un jour.</li>
+<li><span class="d">2025–26</span>Modèles de raisonnement et agents ; méga-contrats de data centers (« Stargate » d'OpenAI), financements circulaires entre fabricants de puces, clouds et laboratoires ; les valorisations privées des laboratoires d'IA approchent 1 000 milliards de dollars.</li>
+</ol>
+
+<div class="people">
+<div class="person"><b>Alan Turing</b><span class="y">1912–1954</span><p>Père de l'informatique ; a posé la question de l'intelligence des machines.</p></div>
+<div class="person"><b>Geoffrey Hinton</b><span class="y">né en 1947</span><p>« Parrain du deep learning » ; prix Turing 2018, Nobel 2024. Alerte aujourd'hui sur les risques de l'IA.</p></div>
+<div class="person"><b>Yann LeCun & Yoshua Bengio</b><span class="y">né en 1960 · né en 1964</span><p>Co-lauréats du prix Turing 2018 avec Hinton. LeCun (réseaux convolutifs, ex-directeur scientifique de l'IA chez Meta) doute des approches uniquement fondées sur les LLM ; Bengio se concentre sur la sécurité.</p></div>
+<div class="person"><b>Fei-Fei Li</b><span class="y">née en 1976</span><p>A créé ImageNet, le jeu de données qui a lancé la vision par ordinateur moderne.</p></div>
+<div class="person"><b>Jensen Huang</b><span class="y">né en 1963</span><p>Cofondateur et CEO de Nvidia ; a misé très tôt sur les GPU pour l'IA.</p></div>
+<div class="person"><b>Demis Hassabis</b><span class="y">né en 1976</span><p>Cofondateur de DeepMind ; AlphaGo, AlphaFold ; Nobel 2024.</p></div>
+<div class="person"><b>Sam Altman</b><span class="y">né en 1985</span><p>CEO d'OpenAI ; a porté ChatGPT et l'immense construction d'infrastructures de calcul.</p></div>
+<div class="person"><b>Ilya Sutskever</b><span class="y">né en 1986</span><p>Co-créateur d'AlexNet, cofondateur d'OpenAI ; a fondé Safe Superintelligence (2024).</p></div>
+<div class="person"><b>Dario Amodei</b><span class="y">né en 1983</span><p>Cofondateur et CEO d'Anthropic (Claude).</p></div>
+<div class="person"><b>Liang Wenfeng</b><span class="y">né en 1985</span><p>Fondateur du fonds quantitatif High-Flyer et de DeepSeek.</p></div>
+<div class="person"><b>Arthur Mensch</b><span class="y">né en 1992</span><p>Cofondateur et CEO de Mistral AI, le principal créateur de modèles européen.</p></div>
+</div>
+
+<h2 id="value"><span class="part">Partie 4 · Où va l'argent</span>La chaîne de valeur de l'IA</h2>
+<table>
+<thead><tr><th>Couche</th><th>Qui</th><th>Économie</th></tr></thead>
+<tbody>
+<tr><td><strong>Énergie &amp; infrastructures</strong></td><td>Producteurs d'électricité, équipements électriques, refroidissement (Vertiv, Schneider, Siemens Energy), constructeurs de data centers</td><td>L'électricité devient le principal goulot d'étranglement ; contrats de long terme</td></tr>
+<tr><td><strong>Puces</strong></td><td>Nvidia, AMD, Broadcom (puces sur mesure), TSMC (fabrication), ASML (machines), SK Hynix/Samsung/Micron (HBM)</td><td>Jusqu'ici le plus gros réservoir de profits — les marges de Nvidia sont exceptionnelles</td></tr>
+<tr><td><strong>Cloud / calcul</strong></td><td>AWS, Azure, Google Cloud, Oracle, CoreWeave, Nebius</td><td>Investissements énormes ; rentabilité selon le taux d'utilisation et les prix</td></tr>
+<tr><td><strong>Modèles</strong></td><td>OpenAI, Anthropic, Google DeepMind, Meta, xAI, Mistral, DeepSeek, Alibaba</td><td>Coûts d'entraînement très élevés ; revenus en forte croissance ; concurrence sur les prix</td></tr>
+<tr><td><strong>Applications</strong></td><td>Éditeurs de logiciels, start-up, toutes les entreprises qui utilisent l'IA</td><td>Là où les gains de productivité doivent finalement apparaître</td></tr>
+</tbody></table>
+
+<h2 id="bubble"><span class="part">Partie 5 · Bulle ou pas ?</span>Suivre l'argent</h2>
+
+<h3 id="numbers">L'ampleur des dépenses</h3>
+<ul>
+<li>Les investissements des grands hyperscalers américains, surtout dans les data centers d'IA, tournaient autour de 400 milliards de dollars en 2025. Pour 2026, Business Insider estime les dépenses d'Amazon, Alphabet, Meta, Microsoft et SpaceX (qui inclut désormais xAI) à environ 800–830 milliards de dollars. Les dirigeants prévoient de dépenser encore plus en 2027.</li>
+<li>Ces investissements absorbent désormais l'essentiel du cash-flow opérationnel de ces entreprises (estimations autour de 90 % pour 2026, contre environ 40 % en 2023). Le free cash flow a fortement baissé chez plusieurs d'entre elles, et elles empruntent de plus en plus. Exemples : des émissions obligataires record, le financement hors bilan de 27 milliards de dollars de Meta avec Blue Owl pour un data center (2025), et la forte dette des neoclouds comme CoreWeave.</li>
+<li>Les valorisations des principaux laboratoires ont explosé. OpenAI était valorisée 852 milliards de dollars après une levée de 122 milliards en mars 2026. Anthropic était valorisée 965 milliards après une levée de 65 milliards en mai 2026. Les revenus croissent très vite — des dizaines de milliards de dollars de chiffre d'affaires annualisé — mais les deux dépensent encore bien plus qu'elles ne gagnent en calcul.</li>
+</ul>
+
+<h3 id="bear">Les arguments pour une bulle</h3>
+<ul>
+<li><strong>L'écart de revenus</strong> : en 2024, David Cahn (Sequoia) posait « la question à 600 milliards de dollars de l'IA ». Les revenus finaux nécessaires pour rentabiliser les infrastructures restent bien supérieurs à ce que rapportent aujourd'hui les applications d'IA.</li>
+<li><strong>Le financement circulaire</strong> : des fabricants de puces investissent dans des laboratoires qui achètent leurs puces. Exemples : l'investissement annoncé de Nvidia, jusqu'à 100 milliards de dollars, dans OpenAI (2025), les bons de souscription d'actions accordés par AMD à OpenAI, et des clouds qui investissent dans des laboratoires qui s'engagent à acheter leur cloud. La demande peut paraître plus forte qu'elle ne l'est vraiment.</li>
+<li><strong>Dette et structures hors bilan</strong> : véhicules ad hoc, crédit privé et prêts garantis par des GPU se multiplient — ce qui rappelle le surinvestissement en fibre optique financé par la dette avant 2001.</li>
+<li><strong>Risque d'obsolescence</strong> : les puces d'IA peuvent devenir obsolètes en 3–5 ans. Si la comptabilité suppose 6 ans, les profits paraissent meilleurs qu'ils ne le sont.</li>
+<li><strong>Concentration</strong> : une poignée d'actions liées à l'IA pèse une part importante du S&amp;P 500. Une déception toucherait les investisseurs indiciels partout.</li>
+<li><strong>Avertissements de poids</strong> : en octobre 2026, des investisseurs comme Ray Dalio ont publiquement parlé de « bulle classique ». Beaucoup d'enquêtes auprès des gérants désignent les actions de l'IA comme le trade le plus encombré.</li>
+</ul>
+
+<h3 id="bull">Les arguments contre (ou « une bulle aux fondations réelles »)</h3>
+<ul>
+<li><strong>Une demande et des revenus réels</strong> : la croissance du cloud a réaccéléré (Google Cloud a crû de plus de 60 % sur un an début 2026). Les hyperscalers se disent « limités en capacité », et les revenus des laboratoires d'IA sont multipliés plusieurs fois par an.</li>
+<li><strong>Des acheteurs riches</strong> : contrairement aux start-up de la bulle internet, l'essentiel des dépenses vient de certaines des entreprises les plus rentables de l'histoire.</li>
+<li><strong>La baisse des coûts tire l'usage</strong> : le prix par token a baissé de façon spectaculaire, ce qui élargit l'adoption (agents, code, automatisation en entreprise). Comme pour les technologies passées, des unités moins chères ont entraîné une dépense totale plus élevée.</li>
+<li><strong>Toutes les valorisations ne sont pas extrêmes</strong> : le P/E prévisionnel de Nvidia a souvent été inférieur à celui de nombreux éditeurs de logiciels, grâce à la croissance de ses bénéfices.</li>
+</ul>
+
+<div class="box pm"><span class="bt">Comment un gérant raisonne</span>
+<p>Les deux peuvent être vrais : l'IA peut être une technologie transformatrice <em>et</em> certaines parties du marché peuvent être surévaluées. Les chemins de fer et internet ont changé le monde, pourtant beaucoup de leurs investisseurs ont perdu de l'argent parce qu'on a construit trop de capacités trop vite avec trop de dette. Surveille : (1) les revenus des applications d'IA vs les investissements, (2) les prix de location des GPU et leur taux d'utilisation, (3) la dette et les spreads de crédit des neoclouds et des financements de data centers, (4) si les prévisions d'investissement continuent de monter, (5) la disponibilité de l'électricité. Les « vendeurs de pelles » (puces, énergie) gagnent d'abord ; les gagnants de long terme ne sont souvent pas les premiers arrivés.</p></div>
+
+<h2 id="players"><span class="part">Partie 6 · La course mondiale</span>Où en sont les principaux acteurs</h2>
+<table>
+<thead><tr><th>Région</th><th>Forces</th><th>Faiblesses / contraintes</th><th>Acteurs clés</th></tr></thead>
+<tbody>
+<tr><td><strong>États-Unis</strong></td><td>Laboratoires de pointe, puces (Nvidia, AMD), clouds, marchés de capitaux, talents</td><td>Contraintes d'électricité et de réseau, coûts élevés, risque de concentration</td><td>OpenAI, Anthropic, Google DeepMind, Meta, Microsoft, Amazon, xAI, Nvidia</td></tr>
+<tr><td><strong>Chine</strong></td><td>De solides modèles à poids ouverts (DeepSeek, Qwen, Kimi, GLM), énormément d'ingénieurs, énergie bon marché, déploiement rapide, robotique</td><td>Contrôles américains à l'export sur les puces avancées et les machines de fabrication ; dépendance aux puces Ascend de Huawei et à SMIC</td><td>DeepSeek, Alibaba (Qwen), ByteDance (Doubao), Moonshot (Kimi), Zhipu (GLM), Baidu, Tencent, Huawei</td></tr>
+<tr><td><strong>Europe</strong></td><td>Régulation (AI Act), recherche, équipements clés (ASML), volonté d'IA souveraine. L'UE prévoit jusqu'à sept « gigafactories d'IA » : environ 10 milliards d'euros publics, avec au moins 20 milliards d'euros privés attendus (appel ouvert en juillet 2026)</td><td>Capitaux et puissance de calcul bien plus faibles, marché fragmenté, coût de l'énergie</td><td>Mistral AI (levée record de 3 milliards d'euros menée par Samsung en septembre 2026), ASML, SAP, Nebius, Black Forest Labs, DeepL ; recherche suisse à l'ETH et l'EPFL</td></tr>
+<tr><td><strong>Taïwan / Corée / Japon</strong></td><td>Fabrication des puces et de la mémoire dont tout le monde a besoin</td><td>Risque géopolitique (Taïwan)</td><td>TSMC, SK Hynix, Samsung, Tokyo Electron, SoftBank (gros investisseur d'OpenAI, propriétaire d'Arm)</td></tr>
+<tr><td><strong>Pays du Golfe</strong></td><td>Capitaux et énergie bon marché ; construction de data centers géants</td><td>Dépendent des autorisations américaines d'export de puces</td><td>Émirats (G42, MGX), Arabie saoudite (Humain)</td></tr>
+<tr><td><strong>Inde</strong></td><td>Talents, services informatiques, énorme base d'utilisateurs</td><td>Encore peu de calcul de pointe</td><td>Reliance, Tata, Infosys, TCS</td></tr>
+</tbody></table>
+
+<h2 id="check"><span class="part">Partie 7 · Teste-toi</span>Questions</h2>
+<details class="q"><summary>1. Quelle est la différence entre entraînement et inférence ?</summary><p>L'entraînement construit le modèle en ajustant ses paramètres sur d'immenses données (un gros coût ponctuel) ; l'inférence consiste à utiliser le modèle pour répondre aux requêtes (un coût récurrent à chaque utilisation).</p></details>
+<details class="q"><summary>2. Pourquoi le « financement circulaire » est-il un signal d'alerte ?</summary><p>Quand des fournisseurs investissent dans leurs propres clients qui leur achètent ensuite, la demande et les revenus affichés peuvent être gonflés par l'argent du fournisseur lui-même plutôt que par les utilisateurs finaux.</p></details>
+<details class="q"><summary>3. Pourquoi DeepSeek-R1 a-t-il fait chuter l'action Nvidia ?</summary><p>Il suggérait qu'on pouvait construire des modèles performants avec beaucoup moins de calcul, faisant craindre que la demande de GPU coûteux soit surestimée.</p></details>
+
+<div class="box key"><span class="bt">Sources et pour aller plus loin</span>
+<p>Les chiffres 2025–26 viennent des rapports des entreprises et de la presse (Business Insider, Bloomberg, Reuters, Euronews, Financial Times) ; ils changent vite, vérifie les derniers résultats publiés. Lectures : Mustafa Suleyman, <em>La Déferlante</em> · Chris Miller, <em>La Guerre des semi-conducteurs</em> · Stanford HAI <em>AI Index</em> (annuel) · Epoch AI (données sur le calcul et les modèles).</p></div>
