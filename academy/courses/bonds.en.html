@@ -1,0 +1,317 @@
+<h2 id="brief"><span class="part">Part 1 · In brief</span>What is a bond?</h2>
+
+<p>A <strong>bond</strong> is a loan that you can buy and sell. A government or a company (the <strong>issuer</strong>) borrows money from investors. In exchange it promises to pay regular interest — the <strong>coupon</strong> — and to repay the amount borrowed — the <strong>principal</strong> or <strong>face value</strong> — on a fixed date, the <strong>maturity</strong>.</p>
+
+<div class="box example"><span class="bt">A simple picture</span>
+<p>You lend CHF 1,000 to the Swiss Confederation for 10 years at 1% per year. Every year you receive CHF 10. After 10 years you get your CHF 1,000 back. If you need your money earlier, you can sell the bond to another investor on the market — but the price you get depends on interest rates at that moment.</p></div>
+
+<p>The most important rule of the bond market:</p>
+<div class="box key"><span class="bt">The one idea to remember</span>
+<p><strong>When interest rates go up, bond prices go down — and the other way round.</strong> If new bonds pay 3% and yours pays only 1%, nobody will pay full price for yours. Its price must fall until its total return (coupon + price gain until maturity) matches the 3% of new bonds. The longer the bond, the bigger this effect. This sensitivity is called <strong>duration</strong>.</p></div>
+
+<p>Bonds matter for three reasons:</p>
+<ul>
+<li><strong>Size</strong>: the global bond market is larger than the global stock market (well over 100 trillion dollars).</li>
+<li><strong>Interest rates drive everything</strong>: government bond yields are the "risk-free rate" used to value every other asset, from stocks to real estate.</li>
+<li><strong>Portfolio role</strong>: bonds give regular income, are less volatile than stocks and — in many crises — rise when stocks fall.</li>
+</ul>
+
+<p>A bond investor faces two main risks: <strong>interest rate risk</strong> (rates rise, prices fall) and <strong>credit risk</strong> (the issuer does not pay). Almost everything in this course is about measuring and managing these two.</p>
+
+<h2 id="history"><span class="part">Part 2 · History</span>Four centuries of lending</h2>
+
+<h3 id="dates">Key dates</h3>
+<ol class="timeline">
+<li><span class="d">1100s–1300s</span><b>Venice, Genoa and Florence</b> finance wars with forced loans to the city that can be traded between citizens — early government bonds.</li>
+<li><span class="d">1694</span>The <b>Bank of England</b> is created to lend to the English government. A modern, trusted government debt market is born, helping Britain finance its rise.</li>
+<li><span class="d">1751</span>Britain consolidates its debts into <b>Consols</b>, perpetual bonds paying 3% forever with no maturity.</li>
+<li><span class="d">1909</span><b>John Moody</b> publishes the first public ratings of railroad bonds. Poor's, Standard Statistics and Fitch follow. Credit ratings are born.</li>
+<li><span class="d">1938</span><b>Frederick Macaulay</b> defines <b>duration</b>: the average time it takes to receive a bond's cash flows.</li>
+<li><span class="d">1952</span><b>Frank Redington</b>, a British actuary, describes <b>immunisation</b>: matching the duration of assets and liabilities to protect an insurer against rate changes.</li>
+<li><span class="d">1971</span>End of Bretton Woods. Currencies float; inflation rises. <b>Bill Gross</b> co-founds PIMCO and turns bond investing into an active, total-return business.</li>
+<li><span class="d">1974–77</span><b>Robert Merton</b> models a company's debt using option theory (the Merton model of credit risk). <b>Oldřich Vašíček</b> proposes the first major model of interest rate dynamics.</li>
+<li><span class="d">1979–81</span><b>Paul Volcker</b>, chair of the US Federal Reserve, raises rates to about 20% to kill inflation. The US 10-year yield peaks near 15.8% in September 1981 — the start of a 40-year bond bull market.</li>
+<li><span class="d">1980s</span><b>Michael Milken</b> (Drexel Burnham Lambert) builds the high-yield ("junk") bond market to finance riskier companies and leveraged buyouts.</li>
+<li><span class="d">1994</span>The <b>"Great Bond Massacre"</b>: the Fed raises rates unexpectedly fast and global bond markets suffer large losses. Orange County goes bankrupt.</li>
+<li><span class="d">1997</span>The US Treasury launches <b>TIPS</b>, inflation-protected bonds (the UK had index-linked gilts since 1981).</li>
+<li><span class="d">1998</span><b>Russia defaults</b> on its domestic debt; LTCM collapses. Liquidity in "safe" bond trades disappears.</li>
+<li><span class="d">2008</span>The <b>Global Financial Crisis</b>: mortgage-backed securities collapse, credit spreads explode, government bonds rally strongly.</li>
+<li><span class="d">2010–12</span>The <b>euro debt crisis</b> (Greece, Ireland, Portugal, Spain, Italy). In July 2012 ECB president <b>Mario Draghi</b> says he will do "whatever it takes", and spreads collapse.</li>
+<li><span class="d">2015–22</span><b>Negative rates</b>: the Swiss National Bank sets its policy rate at −0.75% (January 2015 to 2022). Swiss government bonds trade at negative yields — investors pay to lend to the state. At the peak, over 18 trillion dollars of global bonds had negative yields.</li>
+<li><span class="d">2022</span><b>The worst bond year in modern history</b>: inflation forces central banks to raise rates fast. The US Aggregate bond index loses about 13%. In September, the <b>UK gilt crisis</b> nearly breaks pension funds using leveraged "liability-driven investment" strategies.</li>
+<li><span class="d">2023</span><b>Silicon Valley Bank</b> fails, partly because of large unrealised losses on long-duration bonds. In March, <b>Credit Suisse</b>'s about CHF 16 billion of AT1 bonds are written down to zero in its rescue by UBS — a shock for bond investors everywhere.</li>
+</ol>
+
+<h3 id="people">Key people</h3>
+<div class="people">
+<div class="person"><b>Frederick Macaulay</b><span class="y">1882–1970</span><p>Economist who invented duration in 1938.</p></div>
+<div class="person"><b>Frank Redington</b><span class="y">1906–1984</span><p>Actuary; theory of immunisation, the basis of liability matching.</p></div>
+<div class="person"><b>Irving Fisher</b><span class="y">1867–1947</span><p>Linked nominal rates, real rates and inflation (the Fisher equation).</p></div>
+<div class="person"><b>John Moody</b><span class="y">1868–1958</span><p>Founder of Moody's; first published bond ratings.</p></div>
+<div class="person"><b>Paul Volcker</b><span class="y">1927–2019</span><p>Fed chair 1979–87. Broke inflation with very high rates.</p></div>
+<div class="person"><b>Bill Gross</b><span class="y">b. 1944</span><p>Co-founder of PIMCO, the "Bond King". Made active bond management a major industry.</p></div>
+<div class="person"><b>Michael Milken</b><span class="y">b. 1946</span><p>Created the modern high-yield bond market.</p></div>
+<div class="person"><b>Robert Merton</b><span class="y">b. 1944</span><p>Structural model of credit risk: equity as a call option on the firm's assets. Nobel 1997.</p></div>
+<div class="person"><b>Mario Draghi</b><span class="y">b. 1947</span><p>ECB president 2011–19. "Whatever it takes" ended the euro debt crisis.</p></div>
+</div>
+
+<div class="box pm"><span class="bt">What history teaches a PM</span>
+<p>For 40 years (1981–2021) falling rates made bonds an easy, winning asset. Many investors forgot duration risk. 2022–23 reminded everyone that a "safe" government bond can lose 20–30% if it is long enough, and that "safe" bank debt can go to zero. Know exactly what risk you own.</p></div>
+
+<h2 id="core"><span class="part">Part 3 · The core</span>How bonds work</h2>
+
+<h3 id="anatomy">3.1 The anatomy of a bond</h3>
+<table>
+<thead><tr><th>Feature</th><th>What it means</th></tr></thead>
+<tbody>
+<tr><td><strong>Issuer</strong></td><td>Government (Swiss "Eidgenossen", US Treasuries, German Bunds), regions and cities, supranationals (World Bank, EIB), banks, companies.</td></tr>
+<tr><td><strong>Face value</strong></td><td>The amount repaid at maturity (often 100% = CHF 1,000 or 5,000 per bond). Prices are quoted in % of face value.</td></tr>
+<tr><td><strong>Coupon</strong></td><td>Annual interest as % of face value. Fixed, floating (reference rate + margin, e.g. SARON + 0.8%) or zero (no coupon, bought at a discount).</td></tr>
+<tr><td><strong>Maturity</strong></td><td>When the principal is repaid. Short (&lt; 3 years), medium, long (&gt; 10 years), even perpetual.</td></tr>
+<tr><td><strong>Seniority</strong></td><td>Order of repayment in bankruptcy: secured → senior unsecured → subordinated → hybrid / AT1 → equity.</td></tr>
+<tr><td><strong>Embedded options</strong></td><td><em>Callable</em>: the issuer can repay early (bad for you when rates fall). <em>Puttable</em>: you can ask for early repayment. <em>Convertible</em>: can be changed into shares.</td></tr>
+<tr><td><strong>Covenants</strong></td><td>Promises written in the contract (limits on debt, dividends, asset sales) that protect lenders.</td></tr>
+<tr><td><strong>Currency</strong></td><td>The currency of payments. A CHF investor in a USD bond takes currency risk.</td></tr>
+</tbody></table>
+<p>Special types: <strong>covered bonds</strong> (Swiss <em>Pfandbriefe</em>: bank bonds backed by a pool of mortgages), <strong>asset-backed and mortgage-backed securities</strong> (pools of loans), <strong>inflation-linked bonds</strong>, <strong>green bonds</strong> (money used for environmental projects).</p>
+
+<h3 id="pricing">3.2 Pricing a bond</h3>
+<p>A bond is worth the present value of its future payments:</p>
+<div class="box formula"><span class="bt">Formula · Bond price</span>
+\[ P = \sum_{t=1}^{T} \frac{C}{(1+y)^t} + \frac{F}{(1+y)^T} \]
+<p>\(C\) = coupon per period, \(F\) = face value, \(T\) = number of periods, \(y\) = <strong>yield to maturity</strong> (the single discount rate that makes the sum equal to the market price).</p></div>
+
+<div class="box example"><span class="bt">Example</span>
+<p>A 5-year bond with a 3% annual coupon, face value 100. Market yield for this risk: 4%.</p>
+<table>
+<thead><tr><th>Year</th><th class="r">Cash flow</th><th class="r">Discount factor 1/1.04ᵗ</th><th class="r">Present value</th></tr></thead>
+<tbody>
+<tr><td>1</td><td class="r">3</td><td class="r">0.9615</td><td class="r">2.885</td></tr>
+<tr><td>2</td><td class="r">3</td><td class="r">0.9246</td><td class="r">2.774</td></tr>
+<tr><td>3</td><td class="r">3</td><td class="r">0.8890</td><td class="r">2.667</td></tr>
+<tr><td>4</td><td class="r">3</td><td class="r">0.8548</td><td class="r">2.564</td></tr>
+<tr><td>5</td><td class="r">103</td><td class="r">0.8219</td><td class="r">84.658</td></tr>
+<tr class="tot"><td colspan="3">Price</td><td class="r">95.55</td></tr>
+</tbody></table>
+<p>The coupon (3%) is below the market yield (4%), so the bond trades <strong>below par</strong> (at a discount). The buyer earns the 3% coupon <em>plus</em> a price gain from 95.55 to 100, which together give 4% per year.</p></div>
+
+<ul>
+<li><strong>Coupon &lt; yield → price &lt; 100</strong> (discount). <strong>Coupon = yield → price = 100</strong> (par). <strong>Coupon &gt; yield → price &gt; 100</strong> (premium).</li>
+<li>As maturity approaches, the price moves towards 100 ("pull to par").</li>
+<li><strong>Clean vs dirty price</strong>: between coupon dates, the buyer pays the seller the interest earned so far — <em>accrued interest</em>. Quotes are "clean" (without it); you pay the "dirty" price = clean + accrued. Day-count conventions (30/360, Actual/365, Actual/Actual) define how accrued interest is computed.</li>
+</ul>
+
+<h3 id="yields">3.3 Yields, spot rates and forward rates</h3>
+<ul>
+<li><strong>Current yield</strong> = coupon / price. Simple but ignores the price gain or loss to maturity.</li>
+<li><strong>Yield to maturity (YTM)</strong>: the internal rate of return if you hold to maturity, the issuer pays everything, and coupons are reinvested at the same yield.</li>
+<li><strong>Yield to worst</strong>: for callable bonds, the lowest of the yield to maturity and the yields to each possible call date.</li>
+</ul>
+
+<h4>Spot rates and the zero curve</h4>
+<p>Using one YTM for all cash flows is a simplification. In reality, each date has its own rate: the <strong>spot rate</strong> \(s_t\), the yield of a zero-coupon bond maturing at \(t\). The correct price is:</p>
+\[ P = \sum_{t=1}^{T} \frac{CF_t}{(1+s_t)^t} \]
+<p>Spot rates are extracted from government bond prices step by step ("bootstrapping"): the 1-year bond gives \(s_1\); with \(s_1\) known, the 2-year bond gives \(s_2\); and so on.</p>
+
+<h4>Forward rates</h4>
+<p>Spot rates contain the market's implied future rates. The 1-year rate starting in 1 year, \(f_{1,1}\), satisfies:</p>
+\[ (1+s_2)^2 = (1+s_1)(1+f_{1,1}) \]
+<div class="box example"><span class="bt">Example</span>
+<p>\(s_1 = 2\%\), \(s_2 = 3\%\). Then \(f_{1,1} = 1.03^2/1.02 - 1 = 4.01\%\). Investing 2 years at 3% is equivalent to investing 1 year at 2% and then 1 year at about 4%. If you think rates in one year will be <em>below</em> 4%, the 2-year bond is the better deal.</p></div>
+
+<h4>Real yields and breakeven inflation</h4>
+<p>Inflation-linked bonds (US TIPS, UK linkers, Swiss and euro linkers) pay a <strong>real yield</strong>: their principal grows with inflation. Comparing them with normal bonds gives the market's inflation expectation:</p>
+\[ \text{Breakeven inflation} \approx y_{\text{nominal}} - y_{\text{real}} \]
+<p>If the 10-year nominal yield is 4.2% and the 10-year TIPS yield 1.9%, the market expects about 2.3% inflation per year (plus a small risk premium). If you expect more inflation, linkers are better; less, nominal bonds are better.</p>
+
+<h3 id="duration">3.4 Duration and convexity: measuring rate risk</h3>
+
+<h4>Macaulay duration</h4>
+<div class="box formula"><span class="bt">Formula · Macaulay duration</span>
+\[ D_{\text{Mac}} = \frac{1}{P}\sum_{t=1}^{T} t \times \frac{CF_t}{(1+y)^t} \]
+<p>The weighted average time (in years) until you receive the bond's cash flows, using their present values as weights. A zero-coupon bond's duration equals its maturity.</p></div>
+
+<h4>Modified duration: price sensitivity</h4>
+<div class="box formula"><span class="bt">Formulas · Modified duration and DV01</span>
+\[ D_{\text{mod}} = \frac{D_{\text{Mac}}}{1+y} \qquad\qquad \frac{\Delta P}{P} \approx -D_{\text{mod}} \times \Delta y \qquad\qquad \text{DV01} = D_{\text{mod}} \times P \times 0.0001 \]
+<p>Modified duration tells you the % price change for a 1-point (100 basis points) change in yield. <strong>DV01</strong> (dollar value of one basis point) is the money gained or lost when the yield moves 0.01% — the unit traders use to size positions.</p></div>
+
+<h4>Convexity</h4>
+<p>The price–yield relation is a curve, not a straight line. Duration is the slope; <strong>convexity</strong> is the curvature:</p>
+\[ \frac{\Delta P}{P} \approx -D_{\text{mod}}\,\Delta y + \frac{1}{2}\,C\,(\Delta y)^2 \qquad C = \frac{1}{P}\sum_{t=1}^{T}\frac{t(t+1)\,CF_t}{(1+y)^{t+2}} \]
+<p>Positive convexity is good for the holder: prices rise <em>more</em> when yields fall than they fall when yields rise.</p>
+
+<div class="box example"><span class="bt">Example (same 5-year 3% bond at 4% yield)</span>
+<p>Macaulay duration = 4.71 years · modified duration = 4.53 · convexity = 25.6 · DV01 = 0.043 per 100 face.</p>
+<table>
+<thead><tr><th>Yield change</th><th class="r">Duration only</th><th class="r">Duration + convexity</th><th class="r">True price change</th></tr></thead>
+<tbody>
+<tr><td>+1% (to 5%)</td><td class="r">−4.53%</td><td class="r">−4.40%</td><td class="r">−4.40%</td></tr>
+<tr><td>−1% (to 3%)</td><td class="r">+4.53%</td><td class="r">+4.66%</td><td class="r">+4.66%</td></tr>
+</tbody></table>
+<p>For comparison, a 10-year zero-coupon bond at 3% (price 74.4) has a modified duration of about 9.7: a 1% rate rise costs almost 10%. A 30-year bond can lose 20% or more.</p></div>
+
+<p><strong>What increases duration?</strong> Longer maturity, lower coupon, lower yield. That is why, after years of near-zero rates, bond portfolios had record durations exactly when rates started rising in 2022.</p>
+
+<div class="box warn"><span class="bt">Negative convexity</span>
+<p>Callable bonds and mortgage-backed securities have <strong>negative convexity</strong>: when rates fall, the issuer repays early (or homeowners refinance), so the price cannot rise much; when rates rise, the bond's life extends and the price falls a lot. You lose on both sides — this is why such bonds pay a higher yield.</p></div>
+
+<h3 id="curve">3.5 The yield curve</h3>
+<p>The <strong>yield curve</strong> plots government bond yields against maturity. Its shape tells you a lot about the economy:</p>
+<ul>
+<li><strong>Normal (upward sloping)</strong>: long rates above short rates. Investors want extra return for lending longer.</li>
+<li><strong>Flat</strong>: often late in an economic cycle.</li>
+<li><strong>Inverted</strong>: short rates above long rates. The market expects the central bank to cut rates, usually because of a coming slowdown. In the US, an inverted 10-year/3-month curve has preceded most recessions since the 1960s — though with long and variable delays.</li>
+</ul>
+
+<h4>Theories of the curve</h4>
+<ul>
+<li><strong>Expectations theory</strong>: long rates are the average of expected future short rates.</li>
+<li><strong>Liquidity preference / term premium</strong>: investors demand an extra premium for the risk of lending long. Long rate = expected short rates + term premium.</li>
+<li><strong>Market segmentation / preferred habitat</strong>: some investors need specific maturities (pension funds want long bonds, banks short ones), so supply and demand at each maturity matter. Central bank purchases (quantitative easing) work partly through this channel.</li>
+</ul>
+
+<h4>Curve strategies</h4>
+<ul>
+<li><strong>Duration bet</strong>: longer duration if you expect rates to fall.</li>
+<li><strong>Steepener</strong>: buy short, sell long (DV01-neutral) if you expect the curve to steepen; <strong>flattener</strong> the opposite.</li>
+<li><strong>Roll-down</strong>: on an upward-sloping curve, a 5-year bond becomes a 4-year bond after a year and is priced at the lower 4-year yield — an extra price gain even if the curve does not move.</li>
+</ul>
+
+<h3 id="credit">3.6 Credit risk</h3>
+<p>For non-government bonds, you must also ask: <strong>will I be paid?</strong></p>
+
+<h4>Ratings</h4>
+<table>
+<thead><tr><th>S&amp;P / Fitch</th><th>Moody's</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>AAA</td><td>Aaa</td><td>Highest quality (Swiss Confederation, Germany)</td></tr>
+<tr><td>AA</td><td>Aa</td><td>Very high quality</td></tr>
+<tr><td>A</td><td>A</td><td>High quality</td></tr>
+<tr><td>BBB</td><td>Baa</td><td>Medium quality — lowest <strong>investment grade</strong></td></tr>
+<tr><td>BB</td><td>Ba</td><td><strong>High yield</strong> ("junk") starts here — speculative</td></tr>
+<tr><td>B</td><td>B</td><td>Highly speculative</td></tr>
+<tr><td>CCC to C</td><td>Caa to C</td><td>Very high risk of default</td></tr>
+<tr><td>D</td><td>—</td><td>In default</td></tr>
+</tbody></table>
+<p>The line between BBB− and BB+ is critical: many funds can only hold investment grade, so a downgrade to high yield ("fallen angel") forces sales and often an overshoot in price.</p>
+
+<h4>Credit spread and expected loss</h4>
+<div class="box formula"><span class="bt">Formulas · Credit spread and expected loss</span>
+\[ \text{Spread} = y_{\text{corporate}} - y_{\text{government}} \qquad\qquad \text{EL} = \text{PD} \times \text{LGD} \times \text{EAD} \]
+<p><strong>PD</strong> = probability of default, <strong>LGD</strong> = loss given default = 1 − recovery rate, <strong>EAD</strong> = exposure at default. A rough rule: spread ≈ PD × LGD + risk and liquidity premium.</p></div>
+<div class="box example"><span class="bt">Example</span>
+<p>A BB bond with a 2% annual default probability and 40% expected recovery: expected loss = 2% × 60% = 1.2% per year. If its spread is 3%, investors are paid 1.8% per year above expected losses for bearing uncertainty and illiquidity. Historically, credit spreads have been larger than realised losses — the <strong>credit risk premium</strong> — but losses come in waves during recessions.</p></div>
+
+<h4>The Merton model</h4>
+<p>Merton (1974) saw that shareholders own a <strong>call option</strong> on the firm's assets with a strike equal to the debt: if assets are worth more than the debt, they keep the surplus; if not, they walk away and lenders take the assets. Lenders, therefore, have sold a <strong>put option</strong>. Consequences: credit risk rises with leverage and asset volatility; equity and credit markets carry information about each other (Moody's KMV uses this "distance to default").</p>
+
+<h4>Credit default swaps (CDS)</h4>
+<p>A CDS is insurance against default: the buyer pays an annual premium (the CDS spread) and is compensated if the issuer defaults. CDS spreads are a real-time market measure of credit risk.</p>
+
+<h4>Capital structure and bank capital</h4>
+<p>Bank bonds have special layers. <strong>AT1 bonds</strong> (Additional Tier 1, also called CoCos — contingent convertibles) pay high coupons but can be converted into shares or written down when the bank's capital falls or the regulator decides. In March 2023, about CHF 16 billion of Credit Suisse AT1 bonds were written down to zero while shareholders still received some value from UBS. Lesson: always read the bond's prospectus — the order of losses is not always what you expect.</p>
+
+<h3 id="returns">3.7 Where bond returns come from</h3>
+<div class="box formula"><span class="bt">Formula · Approximate bond return over one year</span>
+\[ R \approx \underbrace{y}_{\text{carry}} \; \underbrace{-\,D_{\text{mod}}\,\Delta y}_{\text{rate move}} \; + \underbrace{\tfrac{1}{2}C(\Delta y)^2}_{\text{convexity}} \; + \text{roll-down} \; - \text{credit losses} \]</div>
+<ul>
+<li><strong>The starting yield is the best predictor</strong> of a bond portfolio's return over a horizon close to its duration. If you buy at 4% and hold for about the duration, your return will be close to 4% whatever rates do in between — higher reinvestment rates compensate for price losses. This is the core of <strong>immunisation</strong>.</li>
+<li>Example: yield 4%, duration 6, rates rise 0.5% in a year → return ≈ 4% − 6 × 0.5% = <strong>1%</strong>.</li>
+</ul>
+
+<h3 id="management">3.8 Managing a bond portfolio</h3>
+
+<h4>Benchmarks</h4>
+<p>Common indices: Bloomberg Global Aggregate, Bloomberg US Aggregate, ICE BofA indices for high yield, and the <strong>SBI (Swiss Bond Index)</strong> family for CHF bonds. Be careful: bond indices are weighted by the amount of debt — the most indebted issuers get the biggest weight.</p>
+
+<h4>Sources of active return</h4>
+<ol>
+<li><strong>Duration</strong>: longer or shorter than the benchmark.</li>
+<li><strong>Curve positioning</strong>: where on the curve (bullet, barbell, ladder).</li>
+<li><strong>Sector and credit allocation</strong>: government vs corporate vs securitised, investment grade vs high yield.</li>
+<li><strong>Issuer selection</strong>: credit analysis of individual borrowers.</li>
+<li><strong>Currency and country</strong>: rates in different countries.</li>
+<li><strong>Relative value</strong>: small pricing differences between similar bonds.</li>
+</ol>
+
+<h4>Bullet, barbell and ladder</h4>
+<ul>
+<li><strong>Bullet</strong>: bonds concentrated around one maturity.</li>
+<li><strong>Barbell</strong>: short and long bonds, nothing in the middle. More convexity than a bullet of the same duration; benefits when the curve flattens.</li>
+<li><strong>Ladder</strong>: equal amounts maturing every year. Simple, steady reinvestment, popular with private investors.</li>
+</ul>
+
+<h4>Immunisation and liability-driven investing (LDI)</h4>
+<p>Redington's conditions for protecting a liability (for example pensions to pay) against small rate changes: (1) present value of assets = present value of liabilities, (2) duration of assets = duration of liabilities, (3) convexity of assets ≥ convexity of liabilities. Pension funds and insurers apply this with long bonds and interest rate swaps.</p>
+<div class="box warn"><span class="bt">The 2022 UK gilt crisis</span>
+<p>UK pension funds used leverage (repo and swaps) to increase duration cheaply. When gilt yields jumped after the September 2022 "mini-budget", they faced huge collateral calls and had to sell gilts, which pushed yields even higher — a doom loop. The Bank of England had to intervene. Leverage turned a hedging strategy into a source of systemic risk.</p></div>
+
+<h3 id="portfolio">3.9 Bonds in a multi-asset portfolio</h3>
+<ul>
+<li><strong>Diversification depends on inflation</strong>: when inflation is low and stable, growth shocks dominate and bonds rise when stocks fall (negative correlation, 2000–2020). When inflation is high and uncertain, rate shocks dominate and both fall together (1970s, 2022).</li>
+<li><strong>Currency hedging for a Swiss investor</strong>: unhedged foreign bonds add currency volatility larger than the bonds' own volatility, so bond allocations are usually hedged to CHF. The hedge return is roughly the short-rate difference: with CHF rates far below USD rates, hedging USD bonds to CHF removes most of their higher yield.</li>
+<li><strong>Liquidity</strong>: government bonds are very liquid; many corporate bonds trade rarely, and liquidity disappears in crises (March 2020).</li>
+</ul>
+
+<h4>The full risk list</h4>
+<table>
+<thead><tr><th>Risk</th><th>Description</th><th>Measure / tool</th></tr></thead>
+<tbody>
+<tr><td>Interest rate</td><td>Rates rise, prices fall</td><td>Duration, DV01, convexity, key-rate durations</td></tr>
+<tr><td>Curve</td><td>Short and long rates move differently</td><td>Key-rate durations</td></tr>
+<tr><td>Credit</td><td>Default or downgrade</td><td>Ratings, spread duration, PD/LGD, CDS</td></tr>
+<tr><td>Inflation</td><td>Inflation erodes fixed payments</td><td>Breakeven, inflation-linked bonds</td></tr>
+<tr><td>Liquidity</td><td>Cannot sell at a fair price</td><td>Bid-ask spreads, issue size</td></tr>
+<tr><td>Reinvestment</td><td>Coupons reinvested at lower rates</td><td>Horizon analysis</td></tr>
+<tr><td>Call / prepayment</td><td>Early repayment when rates fall</td><td>Yield to worst, option-adjusted spread</td></tr>
+<tr><td>Currency</td><td>Foreign currency loses value</td><td>Hedging with forwards</td></tr>
+</tbody></table>
+
+<h3 id="checklist">3.10 A bond analyst's checklist</h3>
+<ol>
+<li>What exactly do I own? Seniority, covenants, options, currency, prospectus details.</li>
+<li>Yield to maturity / to worst, and what part is compensation for rates vs credit.</li>
+<li>Duration, convexity, DV01 — how much do I lose if rates rise 1%?</li>
+<li>Where is this bond on the curve, and what do forwards imply?</li>
+<li>Credit: leverage, interest coverage, free cash flow, refinancing needs, rating trend.</li>
+<li>Is the spread enough for expected losses, liquidity and uncertainty?</li>
+<li>Inflation view vs breakeven.</li>
+<li>Currency: hedged or not, and at what cost?</li>
+<li>Role in the portfolio: income, diversification or return?</li>
+</ol>
+
+<h2 id="check"><span class="part">Part 4 · Check yourself</span>Questions to test your understanding</h2>
+<details class="q"><summary>1. A bond has a modified duration of 7. Yields rise from 3% to 3.5%. Approximate price change?</summary><p>−7 × 0.5% = <strong>−3.5%</strong> (slightly less in reality thanks to convexity).</p></details>
+<details class="q"><summary>2. Why does a zero-coupon bond have a higher duration than a coupon bond of the same maturity?</summary><p>All its cash comes at maturity, while a coupon bond returns part of its value earlier. The weighted average time to receive cash is therefore longer.</p></details>
+<details class="q"><summary>3. The 1-year rate is 1% and the 2-year rate 2%. What 1-year rate does the market imply in one year?</summary><p>\(1.02^2/1.01 - 1 \approx 3.0\%\).</p></details>
+<details class="q"><summary>4. A bond pays a 5% coupon and trades at 108. Is its yield above or below 5%?</summary><p>Below. A premium price means the yield is lower than the coupon: the buyer will lose 8 points of price until maturity.</p></details>
+<details class="q"><summary>5. Why can a "safe" government bond lose 20% in a year?</summary><p>Because of duration. A long bond with a duration of 20 loses about 20% if yields rise 1 percentage point. Credit safety does not mean price safety.</p></details>
+<details class="q"><summary>6. A company bond yields 6.5%, the government bond 4%. Default probability 1.5%, recovery 40%. What is the risk premium over expected loss?</summary><p>Spread = 2.5%. Expected loss = 1.5% × 60% = 0.9%. Premium ≈ <strong>1.6%</strong> per year.</p></details>
+<details class="q"><summary>7. Why did stocks and bonds fall together in 2022?</summary><p>The main shock was inflation, which pushed rates up. Higher rates lower the value of both bonds (directly) and stocks (higher discount rate). Negative stock-bond correlation is typical only when inflation is low and stable.</p></details>
+
+<h2 id="glossary"><span class="part">Part 5 · Glossary</span>Key terms</h2>
+<dl class="gloss">
+<dt>Accrued interest</dt><dd>Interest earned since the last coupon, paid by the buyer to the seller.</dd>
+<dt>AT1 / CoCo</dt><dd>Bank bond that can be converted to shares or written off when capital is too low.</dd>
+<dt>Basis point</dt><dd>0.01%. 100 basis points = 1%.</dd>
+<dt>Breakeven inflation</dt><dd>Nominal yield minus real yield; market-implied inflation.</dd>
+<dt>Callable bond</dt><dd>Bond the issuer can repay before maturity.</dd>
+<dt>Convexity</dt><dd>Curvature of the price–yield relation.</dd>
+<dt>Coupon</dt><dd>Regular interest paid by a bond.</dd>
+<dt>Credit spread</dt><dd>Extra yield over a government bond, paid for credit risk.</dd>
+<dt>Duration</dt><dd>Weighted average time to receive cash flows; measure of rate sensitivity.</dd>
+<dt>DV01</dt><dd>Price change for a 0.01% change in yield.</dd>
+<dt>Forward rate</dt><dd>Future interest rate implied by today's spot rates.</dd>
+<dt>High yield</dt><dd>Bonds rated below BBB−/Baa3.</dd>
+<dt>Immunisation</dt><dd>Matching assets to liabilities so rate changes do not hurt.</dd>
+<dt>Investment grade</dt><dd>Bonds rated BBB−/Baa3 or higher.</dd>
+<dt>Par</dt><dd>Price equal to face value (100%).</dd>
+<dt>Spot rate</dt><dd>Yield of a zero-coupon bond for a given maturity.</dd>
+<dt>Yield curve</dt><dd>Yields of similar bonds plotted against maturity.</dd>
+<dt>Yield to maturity</dt><dd>Internal rate of return of a bond held to maturity.</dd>
+<dt>Zero-coupon bond</dt><dd>Bond with no coupon, bought below face value.</dd>
+</dl>
+
+<div class="box key"><span class="bt">To go further</span>
+<p>Fabozzi, <em>Bond Markets, Analysis and Strategies</em> · Tuckman &amp; Serrat, <em>Fixed Income Securities</em> · Homer &amp; Sylla, <em>A History of Interest Rates</em> · Ilmanen, <em>Expected Returns</em> (bond chapters) · Swiss National Bank and SIX websites for CHF yield data.</p></div>
