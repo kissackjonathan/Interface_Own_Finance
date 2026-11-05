@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PM Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<script>
+window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{typeset:false}};
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script>
+<style>
+:root{
+  --bg:#f5f6f8;--card:#fff;--line:#e4e7ec;--line2:#eef0f3;
+  --ink:#0b1220;--ink2:#4a5567;--ink3:#8b94a5;
+  --accent:#1b3b8c;--accent2:#2550c0;--soft:#edf2fc;
+  --pos:#0d7a44;--warn:#9a5d00;--r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+button{font:inherit;color:inherit}
+header{position:sticky;top:0;z-index:30;background:rgba(245,246,248,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hwrap{max-width:1240px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--ink)}
+.brand .mark{width:28px;height:28px;border-radius:8px;background:var(--accent);display:grid;place-items:center}
+.grow{flex:1}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.lang button{border:0;background:transparent;padding:6px 12px;font-weight:700;font-size:13px;color:var(--ink2);cursor:pointer}
+.lang button.on{background:var(--soft);color:var(--accent)}
+#progress{position:absolute;left:0;bottom:-1px;height:2px;background:var(--accent);width:0}
+main{max-width:1240px;margin:0 auto;padding:28px 24px 80px}
+/* hub */
+.hero{padding:16px 0 26px}
+.hero h1{font-size:34px;letter-spacing:-.025em;margin:0 0 8px}
+.hero p{color:var(--ink2);max-width:680px;margin:0;font-size:16px;line-height:1.55}
+.stats{display:flex;gap:22px;margin-top:18px;color:var(--ink2);font-size:13.5px;flex-wrap:wrap}
+.stats b{color:var(--ink);font-size:16px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 18px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 13px;font-size:13px;font-weight:600;color:var(--ink2);cursor:pointer}
+.chip.on{border-color:var(--accent);color:var(--accent);background:var(--soft)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.cc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s;position:relative}
+.cc:hover{border-color:#c4cbd8;transform:translateY(-1px)}
+.cc.soon{opacity:.62}
+.cc .ic{width:38px;height:38px;border-radius:10px;background:var(--soft);display:grid;place-items:center;font-size:19px}
+.cc .num{position:absolute;top:18px;right:20px;color:var(--ink3);font-weight:700;font-size:12px}
+.cc h3{margin:0;font-size:16px;letter-spacing:-.01em;line-height:1.3}
+.cc p{margin:0;color:var(--ink2);font-size:13.5px;line-height:1.5;flex:1}
+.cc .meta{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--ink3);font-weight:600}
+.badge{border-radius:999px;padding:2px 9px;font-size:11.5px;font-weight:700}
+.badge.ready{background:#e8f5ee;color:var(--pos)}
+.badge.soon{background:var(--line2);color:var(--ink3)}
+.badge.done{background:var(--soft);color:var(--accent)}
+/* course */
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:48px}
+@media(max-width:980px){.layout{grid-template-columns:minmax(0,1fr)}.toc{display:none}}
+.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;padding-right:6px;font-size:13px}
+.toc .t{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink3);font-weight:700;margin-bottom:10px}
+.toc a{display:block;text-decoration:none;color:var(--ink2);padding:5px 10px;border-left:2px solid var(--line);line-height:1.35}
+.toc a.h3{padding-left:22px;font-size:12.5px;color:var(--ink3)}
+.toc a.on{color:var(--accent);border-left-color:var(--accent);font-weight:700}
+.toc a:hover{color:var(--ink)}
+.crumb{font-size:13px;color:var(--ink3);margin-bottom:14px}
+.crumb a{color:var(--ink2);text-decoration:none}
+.chead h1{font-size:34px;letter-spacing:-.025em;margin:0 0 10px;line-height:1.15}
+.chead .lead{color:var(--ink2);font-size:16.5px;line-height:1.55;margin:0 0 14px;max-width:720px}
+.chead .meta{display:flex;gap:16px;color:var(--ink3);font-size:13px;font-weight:600;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid var(--line)}
+/* prose */
+.prose{max-width:760px;font-family:"Source Serif 4",Georgia,serif;font-size:18px;line-height:1.7;color:#1b2333}
+.prose h2{font-family:Manrope,sans-serif;font-size:25px;letter-spacing:-.02em;margin:56px 0 14px;color:var(--ink);scroll-margin-top:80px;line-height:1.25}
+.prose h2 .part{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.prose h3{font-family:Manrope,sans-serif;font-size:19px;margin:36px 0 10px;color:var(--ink);scroll-margin-top:80px;letter-spacing:-.01em}
+.prose h4{font-family:Manrope,sans-serif;font-size:16px;margin:26px 0 6px;color:var(--ink)}
+.prose p{margin:0 0 16px}
+.prose ul,.prose ol{padding-left:24px;margin:0 0 18px}
+.prose li{margin-bottom:7px}
+.prose strong{color:var(--ink)}
+.prose .box{font-family:Manrope,sans-serif;font-size:15.5px;line-height:1.6;border-radius:12px;padding:16px 18px;margin:22px 0;border:1px solid var(--line);background:#fff}
+.prose .box>:last-child{margin-bottom:0}
+.prose .box .bt{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:800;margin-bottom:8px;display:block}
+.prose .box.key{background:var(--soft);border-color:#d3def4}.prose .box.key .bt{color:var(--accent)}
+.prose .box.formula{background:#fbfbfd;border-color:#dfe3ea}.prose .box.formula .bt{color:#5b6472}
+.prose .box.example{background:#f2faf5;border-color:#cfe8da}.prose .box.example .bt{color:var(--pos)}
+.prose .box.pm{background:#fbf6ee;border-color:#ecdcc0}.prose .box.pm .bt{color:#8a5a00}
+.prose .box.warn{background:#fdf1f0;border-color:#f1d0cc}.prose .box.warn .bt{color:#a3302a}
+.prose mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;padding:4px 0;margin:10px 0!important}
+.prose table{width:100%;border-collapse:collapse;font-family:Manrope,sans-serif;font-size:14px;margin:18px 0 22px;display:block;overflow-x:auto}
+.prose th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink3);padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.prose td{padding:9px 10px;border-bottom:1px solid var(--line2);vertical-align:top}
+.prose td.r,.prose th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.prose tr.tot td{font-weight:800;border-top:1px solid var(--line)}
+.timeline{list-style:none;padding:0!important;margin:20px 0 26px;border-left:2px solid var(--line);font-family:Manrope,sans-serif;font-size:15px;line-height:1.55}
+.timeline li{position:relative;padding:0 0 18px 22px;margin:0!important}
+.timeline li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--accent)}
+.timeline .d{display:inline-block;font-weight:800;color:var(--accent);min-width:54px;margin-right:6px}
+.people{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:18px 0 26px;font-family:Manrope,sans-serif}
+.person{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 15px;font-size:14px;line-height:1.5}
+.person b{display:block;font-size:15px}
+.person .y{color:var(--ink3);font-size:12px;font-weight:600}
+.person p{margin:6px 0 0;color:var(--ink2)}
+details.q{font-family:Manrope,sans-serif;font-size:15px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+details.q summary{cursor:pointer;font-weight:700;line-height:1.5}
+details.q[open] summary{margin-bottom:8px}
+details.q p{margin:0;color:var(--ink2);line-height:1.6}
+dl.gloss{font-family:Manrope,sans-serif;font-size:15px;line-height:1.55;display:grid;grid-template-columns:200px 1fr;gap:8px 18px}
+dl.gloss dt{font-weight:800}
+dl.gloss dd{margin:0;color:var(--ink2)}
+@media(max-width:600px){main{padding:20px 16px 60px}.hwrap{padding:12px 16px}dl.gloss{grid-template-columns:1fr}dl.gloss dd{margin-bottom:8px}.prose{font-size:17px}.chead h1,.hero h1{font-size:27px}}
+.done-row{max-width:760px;margin-top:48px;padding-top:22px;border-top:1px solid var(--line);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 15px;font-weight:700;cursor:pointer;text-decoration:none;color:var(--ink);font-size:14px}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+.loading{color:var(--ink3);padding:60px 0;text-align:center}
+.soonpage{max-width:620px;margin:40px auto;text-align:center;color:var(--ink2);line-height:1.6}
+</style>
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <a class="brand" href="#"><div class="mark"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 12V7M8 12V4M13 12V9" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>PM Academy</a>
+    <div class="grow"></div>
+    <a href="../patrimoine/" style="font-weight:700;font-size:13px;text-decoration:none;color:var(--ink2)">Mon Patrimoine ↗</a>
+    <div class="lang" id="lang"><button data-l="en">EN</button><button data-l="fr">FR</button></div>
+  </div>
+  <div id="progress"></div>
+</header>
+<main id="app"><div class="loading">Loading…</div></main>
+
+<script>
+(function(){
+"use strict";
+const COURSES=[
+ {id:'equities',ic:'📈',cat:'markets',status:'ready',
+  t:{en:'Stock Analysis: Fundamental & Quantitative',fr:'Analyser une action : fondamental & quantitatif'},
+  d:{en:'How a professional analyses a company and its stock: financial statements, business quality, ROIC, DCF, multiples, factors and building a thesis.',fr:'Comment un professionnel analyse une entreprise et son action : états financiers, qualité du business, ROIC, DCF, multiples, facteurs et thèse d\'investissement.'}},
+ {id:'investment',ic:'🧭',cat:'foundations',status:'soon',
+  t:{en:'Investment Concepts: Alpha, Beta & Risk',fr:'Concepts d\'investissement : alpha, bêta & risque'},
+  d:{en:'Every term a portfolio manager uses: return, risk, alpha, beta, Sharpe, tracking error, diversification, factor exposure.',fr:'Tous les termes d\'un gérant : rendement, risque, alpha, bêta, Sharpe, tracking error, diversification, expositions factorielles.'}},
+ {id:'valuation',ic:'🧮',cat:'foundations',status:'soon',
+  t:{en:'Valuation',fr:'Valorisation'},
+  d:{en:'DCF, multiples, sum-of-the-parts, LBO and option-based valuation — from first principles to real cases.',fr:'DCF, multiples, somme des parties, LBO et valorisation optionnelle — des principes aux cas réels.'}},
+ {id:'etf',ic:'🧺',cat:'markets',status:'soon',
+  t:{en:'ETFs & Index Investing',fr:'ETF & gestion indicielle'},
+  d:{en:'How ETFs are built, creation/redemption, tracking, costs, physical vs synthetic, and how to use them in a portfolio.',fr:'Fonctionnement des ETF, création/rachat, réplication, coûts, physique vs synthétique et usage en portefeuille.'}},
+ {id:'bonds',ic:'📜',cat:'markets',status:'soon',
+  t:{en:'Bonds & Fixed Income',fr:'Obligations & taux fixe'},
+  d:{en:'Pricing, yield, duration, convexity, credit spreads, ratings and the main bond strategies.',fr:'Prix, rendement, duration, convexité, spreads de crédit, notations et stratégies obligataires.'}},
+ {id:'rates',ic:'🏦',cat:'macro',status:'soon',
+  t:{en:'Interest Rates & Central Banks',fr:'Taux d\'intérêt & banques centrales'},
+  d:{en:'Yield curve, monetary policy, real vs nominal rates and how rates drive every asset price.',fr:'Courbe des taux, politique monétaire, taux réels vs nominaux et impact sur tous les actifs.'}},
+ {id:'macro',ic:'🌍',cat:'macro',status:'soon',
+  t:{en:'Macroeconomics',fr:'Macroéconomie'},
+  d:{en:'Growth, inflation, cycles, fiscal policy, currencies and how to read the macro picture as an investor.',fr:'Croissance, inflation, cycles, politique budgétaire, devises et lecture macro pour investir.'}},
+ {id:'micro',ic:'🔬',cat:'macro',status:'soon',
+  t:{en:'Microeconomics',fr:'Microéconomie'},
+  d:{en:'Supply, demand, market structures, pricing power and game theory applied to companies.',fr:'Offre, demande, structures de marché, pouvoir de prix et théorie des jeux appliqués aux entreprises.'}},
+ {id:'trading',ic:'⚡',cat:'markets',status:'soon',
+  t:{en:'Trading',fr:'Trading'},
+  d:{en:'Market microstructure, order types, technical analysis, derivatives basics, risk management and execution.',fr:'Microstructure, types d\'ordres, analyse technique, bases des dérivés, gestion du risque et exécution.'}},
+ {id:'gold',ic:'🥇',cat:'assets',status:'soon',
+  t:{en:'Gold & Precious Metals',fr:'Or & métaux précieux'},
+  d:{en:'Why gold matters, what drives its price, central bank buying, and how to own it.',fr:'Pourquoi l\'or compte, ce qui fait son prix, les achats des banques centrales et comment en détenir.'}},
+ {id:'rare-earths',ic:'🧲',cat:'assets',status:'soon',
+  t:{en:'Rare Earths & Critical Minerals',fr:'Terres rares & métaux critiques'},
+  d:{en:'Supply chains, China\'s dominance, the energy transition and how to invest in the theme.',fr:'Chaînes d\'approvisionnement, domination chinoise, transition énergétique et comment investir.'}},
+ {id:'tech',ic:'💻',cat:'sectors',status:'soon',
+  t:{en:'Technology Sector',fr:'Secteur technologique'},
+  d:{en:'Semiconductors, software, platforms: business models, metrics and how to value tech companies.',fr:'Semi-conducteurs, logiciels, plateformes : modèles, métriques et valorisation des entreprises tech.'}},
+ {id:'ai',ic:'🤖',cat:'sectors',status:'soon',
+  t:{en:'Artificial Intelligence',fr:'Intelligence artificielle'},
+  d:{en:'The AI value chain from chips to applications, economics of models and how to invest in AI.',fr:'La chaîne de valeur de l\'IA des puces aux applications, économie des modèles et investissement.'}},
+ {id:'hedge-funds',ic:'🛡️',cat:'assets',status:'soon',
+  t:{en:'Hedge Funds',fr:'Hedge funds'},
+  d:{en:'Strategies (long/short, macro, quant, event-driven), fees, leverage and famous funds.',fr:'Stratégies (long/short, macro, quant, event-driven), frais, levier et fonds célèbres.'}},
+ {id:'real-estate',ic:'🏢',cat:'assets',status:'soon',
+  t:{en:'Real Estate',fr:'Immobilier'},
+  d:{en:'Direct property, REITs, cap rates, leverage and real estate cycles (including Switzerland).',fr:'Immobilier direct, REITs, taux de capitalisation, levier et cycles immobiliers (Suisse incluse).'}},
+ {id:'geopolitics',ic:'🗺️',cat:'macro',status:'soon',
+  t:{en:'Geopolitics & Markets',fr:'Géopolitique & marchés'},
+  d:{en:'Wars, sanctions, trade, energy and great-power rivalry — and how to price geopolitical risk.',fr:'Guerres, sanctions, commerce, énergie et rivalités de puissances — comment intégrer le risque géopolitique.'}}
+];
+const CATS={all:{en:'All',fr:'Tous'},foundations:{en:'Foundations',fr:'Fondamentaux'},markets:{en:'Markets',fr:'Marchés'},macro:{en:'Macro & world',fr:'Macro & monde'},assets:{en:'Asset classes',fr:'Classes d\'actifs'},sectors:{en:'Sectors',fr:'Secteurs'}};
+const T={
+  heroT:{en:'Become a portfolio manager',fr:'Deviens portfolio manager'},
+  heroP:{en:'In-depth courses on every theme a professional investor must master. Each course goes from a simple explanation, to the history and key people, to the full technical machinery.',fr:'Des cours approfondis sur chaque thème qu\'un investisseur professionnel doit maîtriser. Chaque cours part d\'une explication simple, passe par l\'histoire et les personnages clés, puis entre dans toute la mécanique technique.'},
+  courses:{en:'courses',fr:'cours'},avail:{en:'available',fr:'disponible(s)'},done:{en:'completed',fr:'terminé(s)'},
+  ready:{en:'Available',fr:'Disponible'},soon:{en:'Coming soon',fr:'Bientôt'},isDone:{en:'Completed ✓',fr:'Terminé ✓'},
+  all:{en:'All courses',fr:'Tous les cours'},contents:{en:'Contents',fr:'Sommaire'},min:{en:'min read',fr:'min de lecture'},
+  mark:{en:'Mark as completed',fr:'Marquer comme terminé'},unmark:{en:'Completed ✓ — undo',fr:'Terminé ✓ — annuler'},back:{en:'← Back to all courses',fr:'← Retour aux cours'},
+  soonP:{en:'This course is being written. It will follow the same structure: simple explanation, history and key people, then the full technical core.',fr:'Ce cours est en cours de rédaction. Il suivra la même structure : explication simple, histoire et personnages clés, puis tout le cœur technique.'},
+  err:{en:'This course could not be loaded.',fr:'Ce cours n\'a pas pu être chargé.'},loading:{en:'Loading…',fr:'Chargement…'}
+};
+const ls={get(k,d){try{const v=localStorage.getItem('pma-'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('pma-'+k,JSON.stringify(v))}catch(e){}}};
+let lang=ls.get('lang','en'),cat='all';
+const done=()=>ls.get('done',{});
+const tr=o=>o[lang]||o.en;
+const app=document.getElementById('app');
+const cache={};
+
+function setLang(l){lang=l;ls.set('lang',l);document.documentElement.lang=l;
+  document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));route()}
+document.getElementById('lang').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setLang(b.dataset.l)});
+
+function hub(){
+  document.title='PM Academy';
+  const d=done(),ready=COURSES.filter(c=>c.status==='ready').length,nd=COURSES.filter(c=>d[c.id]).length;
+  const list=COURSES.filter(c=>cat==='all'||c.cat===cat);
+  app.innerHTML='<div class="hero"><h1>'+tr(T.heroT)+'</h1><p>'+tr(T.heroP)+'</p><div class="stats"><span><b>'+COURSES.length+'</b> '+tr(T.courses)+'</span><span><b>'+ready+'</b> '+tr(T.avail)+'</span><span><b>'+nd+'</b> '+tr(T.done)+'</span></div></div>'+
+  '<div class="filters">'+Object.keys(CATS).map(k=>'<button class="chip'+(k===cat?' on':'')+'" data-cat="'+k+'">'+tr(CATS[k])+'</button>').join('')+'</div>'+
+  '<div class="cards">'+list.map(c=>{const i=COURSES.indexOf(c)+1;const b=d[c.id]?'<span class="badge done">'+tr(T.isDone)+'</span>':c.status==='ready'?'<span class="badge ready">'+tr(T.ready)+'</span>':'<span class="badge soon">'+tr(T.soon)+'</span>';
+    return '<a class="cc'+(c.status==='ready'?'':' soon')+'" href="#'+c.id+'"><span class="num">'+String(i).padStart(2,'0')+'</span><div class="ic">'+c.ic+'</div><h3>'+tr(c.t)+'</h3><p>'+tr(c.d)+'</p><div class="meta">'+b+'<span>'+tr(CATS[c.cat])+'</span></div></a>'}).join('')+'</div>';
+  app.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{cat=b.dataset.cat;hub()});
+  setProgress(0);
+}
+
+async function load(id){
+  const key=id+'.'+lang;if(cache[key])return cache[key];
+  const r=await fetch('courses/'+id+'.'+lang+'.html',{cache:'no-cache'});if(!r.ok)throw new Error(r.status);
+  return cache[key]=await r.text();
+}
+async function course(c){
+  document.title=tr(c.t)+' — PM Academy';
+  const crumb='<div class="crumb"><a href="#">'+tr(T.all)+'</a> / '+tr(CATS[c.cat])+'</div>';
+  if(c.status!=='ready'){app.innerHTML=crumb+'<div class="chead"><h1>'+tr(c.t)+'</h1><p class="lead">'+tr(c.d)+'</p></div><div class="soonpage"><p>'+tr(T.soonP)+'</p><a class="btn" href="#">'+tr(T.back)+'</a></div>';return}
+  app.innerHTML='<div class="loading">'+tr(T.loading)+'</div>';
+  let html;try{html=await load(c.id)}catch(e){app.innerHTML=crumb+'<div class="soonpage"><p>'+tr(T.err)+'</p><a class="btn" href="#">'+tr(T.back)+'</a></div>';return}
+  if(location.hash.slice(1)!==c.id)return;
+  app.innerHTML='<div class="layout"><nav class="toc" id="toc"></nav><article>'+crumb+'<div class="chead"><h1>'+tr(c.t)+'</h1><p class="lead">'+tr(c.d)+'</p><div class="meta" id="cmeta"></div></div><div class="prose" id="prose">'+html+'</div><div class="done-row"><button class="btn pri" id="doneBtn"></button><a class="btn" href="#">'+tr(T.back)+'</a></div></article></div>';
+  const prose=document.getElementById('prose');
+  const words=prose.textContent.trim().split(/\s+/).length;
+  document.getElementById('cmeta').innerHTML='<span>'+Math.round(words/220)+' '+tr(T.min)+'</span><span>'+prose.querySelectorAll('h2').length+' '+(lang==='fr'?'parties':'parts')+'</span>';
+  // toc
+  const hs=[...prose.querySelectorAll('h2,h3')];
+  hs.forEach((h,i)=>{if(!h.id)h.id='s'+i});
+  const toc=document.getElementById('toc');
+  toc.innerHTML='<div class="t">'+tr(T.contents)+'</div>'+hs.map(h=>{const lab=h.cloneNode(true);const p=lab.querySelector('.part');if(p)p.remove();return '<a class="'+h.tagName.toLowerCase()+'" href="#'+c.id+'" data-to="'+h.id+'">'+lab.textContent.trim()+'</a>'}).join('');
+  toc.addEventListener('click',e=>{const a=e.target.closest('a[data-to]');if(!a)return;e.preventDefault();document.getElementById(a.dataset.to).scrollIntoView({behavior:'smooth'})});
+  const db=document.getElementById('doneBtn');const upd=()=>{db.textContent=done()[c.id]?tr(T.unmark):tr(T.mark)};upd();
+  db.onclick=()=>{const d=done();if(d[c.id])delete d[c.id];else d[c.id]=1;ls.set('done',d);upd()};
+  window.scrollTo(0,ls.get('pos-'+c.id,0)||0);
+  typeset(prose);
+  spy=()=>{const y=window.scrollY+140;let cur=hs[0];for(const h of hs){if(h.offsetTop<=y)cur=h;else break}
+    toc.querySelectorAll('a').forEach(a=>a.classList.toggle('on',a.dataset.to===(cur&&cur.id)));
+    const max=document.documentElement.scrollHeight-innerHeight;setProgress(max>0?scrollY/max:0);
+    clearTimeout(spy._t);spy._t=setTimeout(()=>ls.set('pos-'+c.id,scrollY),400)};
+  spy();
+}
+let spy=null;
+window.addEventListener('scroll',()=>{if(spy)spy()},{passive:true});
+function setProgress(p){document.getElementById('progress').style.width=(p*100)+'%'}
+function typeset(el){
+  let tries=0;const go=()=>{if(window.MathJax&&MathJax.typesetPromise){MathJax.typesetPromise([el]).catch(()=>{})}else if(tries++<50)setTimeout(go,200)};go();
+}
+function route(){
+  spy=null;const id=location.hash.slice(1);const c=COURSES.find(x=>x.id===id);
+  if(c){course(c)}else{hub();window.scrollTo(0,0)}
+}
+window.addEventListener('hashchange',route);
+setLang(lang);
+})();
+</script>
+</body>
+</html>
